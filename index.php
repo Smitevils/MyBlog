@@ -5,7 +5,6 @@
 	<title>Document</title>
 </head>
 <body>
-	d
-	1
+	<p>Some Text</p>
 </body>
 </html>
