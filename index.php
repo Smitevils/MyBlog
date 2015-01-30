@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>SmiteVils Blog</title>
 </head>
 <body>
-	<p>Some Text</p>
-	<p>Second Some Text</p>
-	<p>Third commit</p>
+	
 </body>
 </html>
