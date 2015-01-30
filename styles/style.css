@@ -1,0 +1,17 @@
+div {outline: 1px red solid;}
+body {
+	background-color: #FEDCC8;
+}
+
+/* Пример добавления шрифтов */
+@font-face {
+  font-family:'example';
+    src:url(../fonts/example.eot);
+      src:url(../fonts/example.eot?#iefix) format('embedded-opentype'),
+          url(../fonts/example.woff) format('woff'),
+          url(../fonts/example.ttf) format('truetype'),
+          url(../fonts/example.svg#font) format('svg');
+}
+
+.example { font: bold 18px example,sans-serif; }
+
