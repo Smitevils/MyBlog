@@ -9,6 +9,11 @@
 	<script src="js/jquery-2.1.1.js"></script>
 </head>
 <body>
-	
+	<div class="info_block">
+		<div class="photo_block">
+			<img src="img/avatars/profile_img150x150_1.jpg" class="avatar" alt="avatar">
+		</div>
+		<h1>Title</h1>
+	</div>
 </body>
 </html>
