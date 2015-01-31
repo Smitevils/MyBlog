@@ -1,6 +1,7 @@
 div {outline: 1px red solid;}
 body {
 	background-color: #1F253D;
+	color: #fff;
 }
 
 /* Пример добавления шрифтов */
@@ -17,8 +18,10 @@ body {
 
 /*============================================*/
 
+
+/* Блок с личной информацией */
 .info_block {
-	width: 400px;
+	width: 430px;
 	min-height: 100px;
 	background-color: #394264;
 	margin: 30px;
@@ -27,14 +30,17 @@ body {
 	-ms-border-radius: 8px;
 	-o-border-radius: 8px;
 	border-radius: 8px;
+	float: left;
 }
 
+/* Блок с фото в блоке личной информации */
 .photo_block {
 	width: 100%;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
+/* Само фото */
 .avatar {
 	width: 150px;
 	height: 150px;
@@ -59,3 +65,44 @@ body {
 }
 
 .info_block h1 {text-align: center;}
+
+/* Блок навигации */
+.navigation_block {
+	width: 800px;
+	min-height: 20px;
+	background-color: #394264;
+	float: left;
+	margin: 30px;
+	float: right;
+}
+
+/* Кнопка навигации */
+.navigation_button {
+	width: 60px;
+	height: 60px;
+	margin: 10px;
+	cursor: pointer;
+}
+
+.megaphone {
+	background: url(../img/icons/megaphone.png) center no-repeat;
+	background-size: 100% 100%;
+	-webkit-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+	float: left;
+}
+
+.megaphone:hover {
+	background-size: 80% 80%;
+}
+
+/* Блок постов */
+.post_block {
+	width: 800px;
+	min-height: 20px;
+	background-color: #394264;
+	float: left;
+	margin: 30px;
+	float: right;
+}
