@@ -16,12 +16,12 @@
 	// Создать переменную $page = число из $_GET['num'] - количество статей на страницу
 		$page = $_GET['num'] - $per_page;
 	// отобразить порядковый номер страницы
-		echo $page/5 + 1 . " pages";
+		//echo $page/5 + 1 . " pages";
 	// иначе если в $_GET ничего нет, то
 	} else {
 		$page=0;
 	// отобразить порядковый номер страницы
-		echo ($page/5) + 1 . " pages ";
+		//echo ($page/5) + 1 . " pages ";
 	};
 
 	// Создаем переменную res и заносим туда все данные из таблицы blog
@@ -33,12 +33,12 @@
 	// mysql_fetch_row() обрабатывает один ряд результата, на который ссылается переданный указатель. Ряд возвращается в массиве.
 	$line=mysql_fetch_row($string);
 	$total_rows=$line[0]; // Узнаем сколько всего строк в таблице
-	echo $total_rows . " stroke of blog"; // Выводим сколько всего строк
+	//echo $total_rows . " stroke of blog"; // Выводим сколько всего строк
 	
 	// узнаем количество будущих страниц = всего зписей в таблице / количество записей на страницу
 	$num_pages=ceil($total_rows/$per_page);
 	// выводмм количество страниц
-	echo $num_pages . " shets " . "<br/>";
+	//echo $num_pages . " shets " . "<br/>";
 
 	// Далее код скрипта вставлен в сам index.php
 	/* include "php_scripts/blog/add_links.php"; include "php_scripts/blog/add_posts.php"; */

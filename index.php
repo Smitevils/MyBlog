@@ -18,7 +18,8 @@
 			<div class="photo_block">
 				<img src="img/avatars/profile_img150x150_1.JPG" class="avatar" alt="avatar">
 			</div>
-			<h1>Title</h1>
+			<h1>SmiteVils</h1>
+			<p style="text-align: center;">smitevils@yandex.ru</p>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -41,3 +42,4 @@
 	</div>
 </body>
 </html>
+
