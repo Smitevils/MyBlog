@@ -1,8 +1,10 @@
-div {outline: 1px red solid;}
+/*div {outline: 1px red solid;}*/
 body {
 	background-color: #1F253D;
 	color: #fff;
 }
+
+.clear {clear: both;}
 
 /* Пример добавления шрифтов */
 @font-face {
@@ -18,13 +20,24 @@ body {
 
 /*============================================*/
 
+/**/
+.left_block {
+	width: 30%;
+	float: left;
+}
+
+.right_block {
+	width: 70%;
+	float: right;
+}
 
 /* Блок с личной информацией */
 .info_block {
-	width: 430px;
+	width: 90%;
 	min-height: 100px;
 	background-color: #394264;
-	margin: 30px;
+	margin: 5%;
+	margin-top: 30px;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	-ms-border-radius: 8px;
@@ -68,12 +81,17 @@ body {
 
 /* Блок навигации */
 .navigation_block {
-	width: 800px;
-	min-height: 20px;
+	width: 96%;
+	min-height: 60px;
 	background-color: #394264;
-	float: left;
-	margin: 30px;
-	float: right;
+	margin: 2%;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
 }
 
 /* Кнопка навигации */
@@ -82,6 +100,7 @@ body {
 	height: 60px;
 	margin: 10px;
 	cursor: pointer;
+	float: left;
 }
 
 .megaphone {
@@ -90,19 +109,53 @@ body {
 	-webkit-transition: all 0.1s ease-in-out;
 	-o-transition: all 0.1s ease-in-out;
 	transition: all 0.1s ease-in-out;
-	float: left;
 }
 
 .megaphone:hover {
 	background-size: 80% 80%;
 }
 
+/**/
+
+.links_to_pages_block {
+	width: 96%;
+	min-height: 20px;
+	margin: 20px 2%;
+	background-color: #394264;
+	text-align: center;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.links_to_pages {
+	color: #fff;
+	background-color: #95abf9;
+	padding: 6px 10px;
+	line-height: 48px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+	text-decoration: none;
+}
+
 /* Блок постов */
 .post_block {
-	width: 800px;
+	width: 92%;
 	min-height: 20px;
 	background-color: #394264;
 	float: left;
-	margin: 30px;
-	float: right;
+	margin: 2%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 20px 2%;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
 }

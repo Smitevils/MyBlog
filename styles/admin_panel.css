@@ -1,0 +1,32 @@
+/* Блок Добавления новости */
+.add_news_block {
+	width: 92%;
+	min-height: 20px;
+	background-color: #394264;
+	margin: 2%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px 2%;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.add_post_text {
+	resize: none;
+	width: 100%;
+	padding: 2%;
+	outline: none;
+	border: none;
+	background-color: #50597B;
+	color: #fff;
+}
+
+input.submit {
+	background-color: #50597B;
+	color: #fff;
+	border: none;
+	padding: 10px;
+}
