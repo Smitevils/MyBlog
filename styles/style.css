@@ -184,3 +184,13 @@ a {color: #fff;}
 	.photo_block {padding-top: 8px;padding-bottom: 8px;}
 	.info_block {padding-bottom: 8px;}
 }
+
+/* Медиа запросы */
+@media screen and (max-width:340px) {
+	.avatar {width: 30px;height: 30px; border: 0px;}
+	.avatar:hover {width: 30px;height: 30px; border: 0px;}
+	.info_block h1 {text-align: center; font-size: 12px; margin: 0;}
+	.info_block p {text-align: center; font-size: 8px; }
+	.photo_block {padding-top: 8px;padding-bottom: 8px;}
+	.info_block {padding-bottom: 8px;}
+}

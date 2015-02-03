@@ -40,6 +40,10 @@
 		?>
 		<div class="clear"></div>
 	</div>
+	<!-- Yandex Metrica -->
+	<?php
+		include "php_scripts/metrika.php";
+	?>
 </body>
 </html>
 
