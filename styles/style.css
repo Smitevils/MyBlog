@@ -164,6 +164,9 @@ a {color: #fff;}
 	border-radius: 8px;
 }
 
+/* Блок для вывода даты создания поста */
+.date_block {text-align: right; margin-top: 20px;}
+
 /* Медиа запросы */
 @media screen and (max-width:580px) {
 	.avatar {width: 90px;height: 90px;}
