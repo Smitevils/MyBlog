@@ -1,0 +1,17 @@
+/*div {outline: 1px red solid;}*/
+body {
+	background-color: #1F253D;
+	color: #fff;
+}
+
+.clear {clear: both;}
+
+.authorization_blok {
+	text-align: center;
+}
+
+input {width: 200px; height: 40px; color: #fff; padding: 0 10px; background-color: #50597B; border: none;}
+
+input.login {width: 180px;}
+input.passw {width: 180px;}
+input.submit {width: 200px; cursor: pointer;}

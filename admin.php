@@ -1,4 +1,14 @@
 <?php
+
+	// Начинаем сессию
+	session_start();
+	// Если не определена константа IN_ADMIN – завершаем работу скрипта
+	if ($_SESSION['access'] != "yes") {
+		header('Location: inside.php');
+		echo "Вы не можете здесь находиться!";
+		die;
+	};
+	//-----------
 	include "php_scripts/blog/blog.php";
 ?>
 
@@ -33,7 +43,7 @@
 				<p><b>Введите текст статьи:</b></p>
 				<p><textarea class="add_post_text" rows="10" cols="45" name="text"></textarea></p>
 				<p><input class="submit" type="submit" value="Отправить"></p>
-			 </form>
+			</form>
 		</div>
 		<div class="links_to_pages_block">
 			<?php
