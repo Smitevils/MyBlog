@@ -14,12 +14,15 @@
 	//Вносим в переменную текст из глобального массива $_POST
 	$title = $_POST['title'];
 
+	//Вносим в переменную текст из глобального массива $_POST
+	$theme = $_POST['theme'];
+
 	// Вычисляем дату
 	$date = date( "d.m.y" );
 
 	if ($news != "") {
 		//mysql_query(" INSERT INTO `blog` (`text`) VALUES ('$news') ",$link); // рабочий
-		mysql_query(" INSERT INTO `blog`(`title`, `text`, `date`) VALUES ('$title','$news','$date') ",$link);
+		mysql_query(" INSERT INTO `blog`(`title`, `text`, `theme`, `date`) VALUES ('$title','$news','$theme','$date') ",$link);
 		//mysql_query(" INSERT INTO `blog` (`date`) VALUES ('$date') ",$link);
 		//echo "Новость добавлена!";
 		//echo 'news=' . $news;

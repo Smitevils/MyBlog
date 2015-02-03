@@ -164,8 +164,14 @@ a {color: #fff;}
 	border-radius: 8px;
 }
 
-/* Блок для вывода даты создания поста */
-.date_block {text-align: right; margin-top: 20px;}
+/* Блок для вывода даты поста */
+.text_block {width: 100%; text-align: left;}
+
+/* Блок для вывода даты поста */
+.date_block {width: 50%; text-align: right; margin-top: 20px; float: right;}
+
+/* Блок для вывода темы поста */
+.theme_block {width: 50%; text-align: left; margin-top: 20px; float: left;}
 
 /* Блок для вывода заголовка поста */
 .title_block {text-align: left; margin-top: 20px; margin-bottom: 20px; font-size: 26px; text-decoration: underline;}
