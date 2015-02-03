@@ -40,6 +40,8 @@
 		</div>
 		<div class="add_news_block">
 			<form action="php_scripts/admin/add_news.php" method="post">
+				<p><b>Введите заголовок статьи:</b></p>
+				<p><input class="title" type="text" name="title"></p>
 				<p><b>Введите текст статьи:</b></p>
 				<p><textarea class="add_post_text" rows="10" cols="45" name="text"></textarea></p>
 				<p><input class="submit" type="submit" value="Отправить"></p>

@@ -167,6 +167,9 @@ a {color: #fff;}
 /* Блок для вывода даты создания поста */
 .date_block {text-align: right; margin-top: 20px;}
 
+/* Блок для вывода заголовка поста */
+.title_block {text-align: left; margin-top: 20px; margin-bottom: 20px; font-size: 26px; text-decoration: underline;}
+
 /* Медиа запросы */
 @media screen and (max-width:580px) {
 	.avatar {width: 90px;height: 90px;}

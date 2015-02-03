@@ -24,6 +24,16 @@
 	color: #fff;
 }
 
+input.title {
+	resize: none;
+	width: 96%;
+	padding: 2%;
+	outline: none;
+	background-color: #50597B;
+	color: #fff;
+	border: none;
+}
+
 input.submit {
 	background-color: #50597B;
 	color: #fff;
