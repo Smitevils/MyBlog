@@ -40,9 +40,10 @@
 		?>
 		<div class="clear"></div>
 	</div>
-	<!-- Yandex Metrica -->
+	<!-- Yandex Metrica and Google Analytics -->
 	<?php
-		include "php_scripts/metrika.php";
+		include_once("php_scripts/metrika.php");
+		include_once("php_scripts/analyticstracking.php");
 	?>
 </body>
 </html>
