@@ -105,17 +105,45 @@ a {color: #fff;}
 	margin: 10px;
 	cursor: pointer;
 	float: left;
+	border-radius: 100%;
+	box-shadow: 0 0 0 #95ABF9; /* Параметры тени */
 }
 
-.megaphone {
-	background: url(../img/icons/megaphone.png) center no-repeat;
+.navigation_button:hover {box-shadow: 0 0 10px #95ABF9; } /* Параметры тени */
+
+.home {
+	background: url(../img/icons/vintage_flat_icons/essentials-01.png) center no-repeat;
 	background-size: 100% 100%;
 	-webkit-transition: all 0.1s ease-in-out;
 	-o-transition: all 0.1s ease-in-out;
 	transition: all 0.1s ease-in-out;
 }
 
-.megaphone:hover {
+.home:hover {
+	background-size: 80% 80%;
+}
+
+.game {
+	background: url(../img/icons/vintage_flat_icons/essentials-02.png) center no-repeat;
+	background-size: 100% 100%;
+	-webkit-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+.game:hover {
+	background-size: 80% 80%;
+}
+
+.rocket {
+	background: url(../img/icons/vintage_flat_icons/essentials-19.png) center no-repeat;
+	background-size: 100% 100%;
+	-webkit-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+.rocket:hover {
 	background-size: 80% 80%;
 }
 

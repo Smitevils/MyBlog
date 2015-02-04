@@ -25,7 +25,9 @@
 	</div>
 	<div class="right_block">
 		<div class="navigation_block">
-			<div class="navigation_button megaphone"></div>
+			<div class="navigation_button home"></div>
+			<div class="navigation_button game"></div>
+			<div class="navigation_button rocket"></div>
 			<div class="clear"></div>
 		</div>
 		<div class="links_to_pages_block">
