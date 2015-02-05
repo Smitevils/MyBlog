@@ -24,12 +24,10 @@
 		<div class="clear"></div>
 	</div>
 	<div class="right_block">
-		<div class="navigation_block">
-			<div class="navigation_button home"></div>
-			<div class="navigation_button game"></div>
-			<div class="navigation_button rocket"></div>
-			<div class="clear"></div>
-		</div>
+		<?php
+			// вставляем меню
+			include "engine/navigation.php";
+		?>
 		<div class="links_to_pages_block">
 			<?php
 				// запускаем массив для создания ссылок на эти страницы

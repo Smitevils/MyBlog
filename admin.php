@@ -34,10 +34,10 @@
 		<div class="clear"></div>
 	</div>
 	<div class="right_block">
-		<div class="navigation_block">
-			<div class="navigation_button megaphone"></div>
-			<div class="clear"></div>
-		</div>
+		<?php
+			// вставляем меню
+			include "engine/navigation.php";
+		?>
 		<div class="add_news_block">
 			<form action="php_scripts/admin/add_news.php" method="post">
 				<p><b>Введите заголовок статьи:</b></p>
