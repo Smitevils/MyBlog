@@ -42,8 +42,21 @@
 			<form action="php_scripts/admin/add_news.php" method="post">
 				<p><b>Введите заголовок статьи:</b></p>
 				<p><input class="title" type="text" name="title"></p>
-				<p><b>Введите тему статьи:</b></p>
-				<p><input class="theme" type="text" name="theme"></p>
+				<p><b>Выберете категорию:</b></p>
+				<!-- Моделим радио кнопки для выбора темы, кнопки из базы данных -->
+				<?php
+					// подключаемся к серверу с базой данных // Данные выданы провайдером
+					$link_for_categories = mysql_connect('localhost','smite211_smite','H@ng@11thepe0p1e') or die("ERROR: ".mysql_error());
+					// После подключения выбираем нужную базу данных
+					mysql_select_db('smite211_smitevils') or die("ERROR: ".mysql_error());
+					// Указываем кодировку в которой будем работать
+					mysql_set_charset('utf8');
+					// заносим все данные из таблицы
+					$categories = mysql_query("SELECT * FROM `categories` ORDER BY `id`");// Заносим в переменную все данные из таблицы
+					while($data=mysql_fetch_array($categories)) {// раскладываем на массив
+						echo '<input type="radio" class="theme" name="theme" value="'.$data['name'].'"> '.$data['name'].'<br>';
+					};
+				?>
 				<p><b>Введите текст статьи:</b></p>
 				<p><textarea class="add_post_text" rows="10" cols="45" name="text"></textarea></p>
 				<p><input class="submit" type="submit" value="Отправить"></p>
