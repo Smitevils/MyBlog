@@ -1,4 +1,6 @@
 <?php
+	// Подключаю названия БД
+	include "data/bd.php";
 	include "php_scripts/blog/blog.php";
 ?>
 
