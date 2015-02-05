@@ -148,6 +148,41 @@ a {color: #fff;}
 }
 
 /**/
+.btn_1 {
+	background: url(../img/icons/vintage_flat_icons/essentials-01.png) center no-repeat;
+	background-size: 100% 100%;
+	-webkit-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+.btn_1:hover {
+	background-size: 80% 80%;
+}
+.btn_2 {
+	background: url(../img/icons/vintage_flat_icons/essentials-02.png) center no-repeat;
+	background-size: 100% 100%;
+	-webkit-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+.btn_2:hover {
+	background-size: 80% 80%;
+}
+.btn_3 {
+	background: url(../img/icons/vintage_flat_icons/essentials-03.png) center no-repeat;
+	background-size: 100% 100%;
+	-webkit-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+.btn_3:hover {
+	background-size: 80% 80%;
+}
+
+/**/
 
 .links_to_pages_block {
 	width: 96%;

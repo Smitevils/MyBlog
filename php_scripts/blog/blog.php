@@ -9,8 +9,8 @@
 	/* (С помощью данного кода вычисляется какая страница открыта, методом добавления данных в адресную строку) */
 
 	// Узнаем с какой темой выводить посты
-	// ..если есть в массиве $_POST['theme'] данные то занести в переменную $theme иначе $theme = "none"
-	if (isset($_GET['theme'])) {$theme = $_GET['theme'];} else {$theme = "none";};
+	// ..если есть в массиве $_POST['theme'] данные то занести в переменную $theme иначе $theme = "home"
+	if (isset($_GET['theme'])) {$theme = $_GET['theme'];} else {$theme = "home";};
 
 	// $per_page = количество статей на страницу
 	$per_page = 5;
@@ -30,7 +30,7 @@
 
 	// Создаем переменную res и заносим туда все данные из таблицы blog
 	// LIMIT вызывается с двумя параметрами - с какой записи начинать, и сколько выводить
-	if ($theme == "none") {// если темы нет то выводим все...
+	if ($theme == "home") {// если темы нет то выводим все...
 		$res = mysql_query("SELECT * FROM `blog` ORDER BY `id` DESC LIMIT $page,$per_page");
 	} else {// ...если тема есть то выводим только по теме
 		$res = mysql_query("SELECT * FROM `blog` WHERE `theme`='$theme' ORDER BY `id` DESC LIMIT $page,$per_page");
@@ -39,7 +39,7 @@
 
 	//Выбираем все элементы из таблицы blog с темой или без
 	// LIMIT вызывается с двумя параметрами - с какой записи начинать, и сколько выводить
-	if ($theme == "none") {// если темы нет то...
+	if ($theme == "home") {// если темы нет то...
 		$string=mysql_query("SELECT count(*) FROM `blog`"); //WHERE `theme`='$theme'
 	} else {// ...если тема есть то
 		$string=mysql_query("SELECT count(*) FROM `blog` WHERE `theme`='$theme'"); //WHERE `theme`='$theme'
