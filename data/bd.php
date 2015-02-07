@@ -1,6 +1,1 @@
-<?php
-
-$bd = "smite211_smitevils";
-
-?>
-
+<?php $bd = "smite211_myblog";?>
