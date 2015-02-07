@@ -16,6 +16,9 @@
 	$news = $_POST['text'];
 
 	//Вносим в переменную текст из глобального массива $_POST
+	$fullnews = $_POST['fulltext'];
+
+	//Вносим в переменную текст из глобального массива $_POST
 	$title = $_POST['title'];
 
 	//Вносим в переменную текст из глобального массива $_POST
@@ -26,7 +29,7 @@
 
 	if ($news != "") {
 		//mysql_query(" INSERT INTO `blog` (`text`) VALUES ('$news') ",$link); // рабочий
-		mysql_query(" INSERT INTO `blog`(`title`, `text`, `theme`, `date`) VALUES ('$title','$news','$theme','$date') ",$link);
+		mysql_query(" INSERT INTO `blog`(`title`, `text`, `fullnews`, `theme`, `date`) VALUES ('$title','$news','$fullnews','$theme','$date') ",$link);
 		//mysql_query(" INSERT INTO `blog` (`date`) VALUES ('$date') ",$link);
 		//echo "Новость добавлена!";
 		//echo 'news=' . $news;

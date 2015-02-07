@@ -19,7 +19,7 @@
 		$x = 0;
 		while($data=mysql_fetch_array($categories)) {// раскладываем на массив
 			$x++;
-		 echo '<a class="navigation_button btn_'.$x.'" href="'.$_SERVER['PHP_SELF'].'?theme='.$data['name'].'">'."</a>\n";
+		 echo '<a class="navigation_button btn_'.$x.'" href="index.php'/*$_SERVER['PHP_SELF']*/.'?theme='.$data['name'].'">'."</a>\n";
 		};
 	?>
 	<div class="clear"></div>

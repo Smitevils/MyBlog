@@ -60,6 +60,8 @@
 				?>
 				<p><b>Введите текст статьи:</b></p>
 				<p><textarea class="add_post_text" rows="10" cols="45" name="text"></textarea></p>
+				<p><b>Введите текст полной статьи:</b></p>
+				<p><textarea class="add_post_text" rows="10" cols="45" name="fulltext"></textarea></p>
 				<p><input class="submit" type="submit" value="Отправить"></p>
 			</form>
 		</div>

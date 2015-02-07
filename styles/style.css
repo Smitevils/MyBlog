@@ -239,6 +239,9 @@ a {color: #fff;}
 /* Блок для вывода заголовка поста */
 .title_block {text-align: left; margin-top: 20px; margin-bottom: 20px; font-size: 26px; text-decoration: underline;}
 
+/* Блок для вывода заголовка поста */
+.a_title {text-align: left; display: block; margin-top: 20px; padding-bottom: 20px; font-size: 26px; text-decoration: underline;}
+
 /* Медиа запросы */
 @media screen and (max-width:580px) {
 	.avatar {width: 90px;height: 90px;}
