@@ -188,6 +188,17 @@ a {color: #fff;}
 .btn_3:hover {
 	background-size: 80% 80%;
 }
+.btn_4 {
+	background: url(../img/icons/vintage_flat_icons/essentials-04.png) center no-repeat;
+	background-size: 100% 100%;
+	-webkit-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+.btn_4:hover {
+	background-size: 80% 80%;
+}
 
 /**/
 
