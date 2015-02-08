@@ -111,6 +111,13 @@ a {color: #fff;}
 
 .navigation_button:hover {box-shadow: 0 0 10px #95ABF9; } /* Параметры тени */
 
+/* Стиль для нажатой кнопки - выбранная категория */
+.navigation_button_on {
+		width: 60px;
+		height: 60px;
+		box-shadow: 0 0 16px 2px #000; /* Параметры тени */
+}
+
 .home {
 	background: url(../img/icons/vintage_flat_icons/essentials-01.png) center no-repeat;
 	background-size: 100% 100%;

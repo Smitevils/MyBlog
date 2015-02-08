@@ -11,6 +11,7 @@
 	// заносим все данные из таблицы
 	$categories = mysql_query("SELECT * FROM `categories` ORDER BY `id`");// Заносим в переменную все данные из таблицы
 
+	if (isset($_GET['theme'])) {$theme = $_GET['theme'];} else {$theme = "";};
 ?>
 
 <div class="navigation_block">
@@ -19,7 +20,10 @@
 		$x = 0;
 		while($data=mysql_fetch_array($categories)) {// раскладываем на массив
 			$x++;
-		 echo '<a class="navigation_button btn_'.$x.'" href="index.php'/*$_SERVER['PHP_SELF']*/.'?theme='.$data['name'].'">'."</a>\n";
+			if ($data['name'] == $theme) {
+				$cfd_btn = "navigation_button_on"; //$class_for_down_btn
+			} else { $cfd_btn = ""; }
+			echo '<a class="navigation_button '.$cfd_btn.' btn_'.$x.'" href="index.php'/*$_SERVER['PHP_SELF']*/.'?theme='.$data['name'].'">'."</a>\n";
 		};
 	?>
 	<div class="clear"></div>
