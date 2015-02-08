@@ -200,6 +200,30 @@ a {color: #fff;}
 	background-size: 80% 80%;
 }
 
+.btn_5 {
+	background: url(../img/icons/vintage_flat_icons/essentials-05.png) center no-repeat;
+	background-size: 100% 100%;
+	-webkit-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+.btn_5:hover {
+	background-size: 80% 80%;
+}
+
+.btn_6 {
+	background: url(../img/icons/vintage_flat_icons/essentials-06.png) center no-repeat;
+	background-size: 100% 100%;
+	-webkit-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+.btn_6:hover {
+	background-size: 80% 80%;
+}
+
 /**/
 
 .links_to_pages_block {
