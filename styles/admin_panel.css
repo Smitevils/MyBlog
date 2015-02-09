@@ -24,6 +24,16 @@
 	color: #fff;
 }
 
+.add_post_text_full {
+	resize: none;
+	width: 96%;
+	padding: 2%;
+	outline: none;
+	border: none;
+	background-color: #50597B;
+	color: #fff;
+}
+
 input.title {
 	resize: none;
 	width: 96%;

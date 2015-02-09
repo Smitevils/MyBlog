@@ -61,20 +61,22 @@
 				<p><b>Введите текст статьи:</b></p>
 				<p><textarea class="add_post_text" rows="10" cols="45" name="text"></textarea></p>
 				<p><b>Введите текст полной статьи:</b></p>
-				<p><textarea class="add_post_text" rows="10" cols="45" name="fulltext"></textarea></p>
+				<p><textarea class="add_post_text_full" rows="10" cols="45" name="fulltext"></textarea></p>
 				<p><input class="submit" type="submit" value="Отправить"></p>
 			</form>
 		</div>
-		<div class="links_to_pages_block">
-			<?php
-				// запускаем массив для создания ссылок на эти страницы
-				include "php_scripts/blog/add_links.php";
-			?>
+		<div class="post_block">title
+			<script>
+				var title = "";
+				var fulltext = "";
+				function sec() {
+					title = $(".title").val();
+					fulltext = $(".add_post_text_full").val();
+					$(".post_block").html("<a class='a_title' href='#'>"+title+"</a><div class='text_block'>"+fulltext+"</div>");
+				}
+				setInterval(sec, 100) // использовать функцию
+			</script>
 		</div>
-		<?php
-			//Выводим сами строки
-			include "php_scripts/blog/add_posts.php";
-		?>
 		<div class="clear"></div>
 	</div>
 </body>

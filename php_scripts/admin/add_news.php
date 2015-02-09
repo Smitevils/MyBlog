@@ -13,16 +13,19 @@
 	$res = mysql_query("SELECT * FROM `blog`");
 
 	//Вносим в переменную текст из глобального массива $_POST
-	$news = $_POST['text'];
+	if (isset($_POST['text'])) {$news = $_POST['text'];} else {$news = "none";};
+	if ($news == "") {$news = "none";};
 
 	//Вносим в переменную текст из глобального массива $_POST
-	$fullnews = $_POST['fulltext'];
+	if (isset($_POST['fulltext'])) {$fullnews = $_POST['fulltext'];} else {$fullnews = "none";};
+	if ($fullnews == "") {$news = $fullnews;};
 
 	//Вносим в переменную текст из глобального массива $_POST
-	$title = $_POST['title'];
+	if (isset($_POST['title'])) {$title = $_POST['title'];} else {$title = "New article";};
+	if ($title == "") {$title = "New article";};
 
 	//Вносим в переменную текст из глобального массива $_POST
-	$theme = $_POST['theme'];
+	if (isset($_POST['theme'])) {$theme = $_POST['theme'];} else {$theme = "home";};
 
 	// Вычисляем дату
 	$date = date( "d.m.y" );
