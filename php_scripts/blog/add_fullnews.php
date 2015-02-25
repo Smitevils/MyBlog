@@ -20,6 +20,7 @@
 		echo "<div class=\"post_block\">";
 			echo "<div class=\"title_block\">" . $row_full['title'] . "</div>";
 		echo "<div class=\"text_block\">" . $row_full['fullnews'] . "</div>";
+			echo "<div class=\"clear\"></div>";
 			echo "<div class=\"theme_block\">" . $row_full['theme'] . "</div>";
 			echo "<div class=\"date_block\">" . $row_full['date'] . "</div>";
 			echo "<div class=\"clear\"></div>";
