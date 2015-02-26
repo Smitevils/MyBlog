@@ -54,3 +54,46 @@ input.submit {
 	border: none;
 	padding: 10px;
 }
+
+/* Обертка для блока вставки картинки */
+.left_block_for_insert_img_block {
+	width: 30%;
+	float: left;
+	text-align: center;
+}
+
+/* Блок / вставка картинки */
+.insert_img_block {
+	width: 89%;
+	padding: 0px 2%;
+	min-height: 100px;
+	background-color: #394264;
+	margin: 5%;
+	margin-right: 2%;
+	margin-top: 0px;
+	padding-bottom: 20px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+	float: left;
+	text-align: center;
+}
+
+.insert_img_block h4 {
+	text-align: center;
+}
+
+.insert_img_block_text {
+	resize: none;
+	margin: 0 auto;
+	width: 96%;
+	padding: 2%;
+	outline: none;
+	border: none;
+	background-color: #50597B;
+	color: #fff;
+}
+
+.insert_img_preview {}
