@@ -25,6 +25,9 @@
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="stylesheet" href="styles/admin_panel.css">
 	<script src="js/jquery-2.1.1.js"></script>
+	<!-- Плагин для обертки видео -->
+	<!-- http://fitvidsjs.com/ -->
+	<script src="js/jquery.fitvids.js"></script>
 </head>
 <body>
 	<div class="left_block">
@@ -48,5 +51,13 @@
 		?>
 		<div class="clear"></div>
 	</div>
+	<!-- Выполняем фунцию fitVids() с оберткой видео / Плагин fitVids -->
+	<script>
+	  $(document).ready(function(){
+	    // Добавьте класс своего div контейнера тут
+	    $(".video_container").fitVids();
+	  });
+	</script>
+	<!-- End fitVids -->
 </body>
 </html>

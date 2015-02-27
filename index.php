@@ -13,6 +13,9 @@
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/style.css">
 	<script src="js/jquery-2.1.1.js"></script>
+	<!-- Плагин для обертки видео -->
+	<!-- http://fitvidsjs.com/ -->
+	<script src="js/jquery.fitvids.js"></script>
 </head>
 <body>
 	<div class="left_block">
@@ -47,6 +50,16 @@
 		include_once("php_scripts/metrika.php");
 		include_once("php_scripts/analyticstracking.php");
 	?>
+
+	<!-- Выполняем фунцию fitVids() с оберткой видео / Плагин fitVids -->
+	<script>
+	  $(document).ready(function(){
+	    // Добавьте класс своего div контейнера тут
+	    $(".video_container").fitVids();
+	  });
+	</script>
+	<!-- End fitVids -->
+
 </body>
 </html>
 

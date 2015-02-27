@@ -23,6 +23,9 @@
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="stylesheet" href="styles/admin_panel.css">
 	<script src="js/jquery-2.1.1.js"></script>
+	<!-- Плагин для обертки видео -->
+	<!-- http://fitvidsjs.com/ -->
+	<script src="js/jquery.fitvids.js"></script>
 </head>
 <body>
 	<div class="left_block">
