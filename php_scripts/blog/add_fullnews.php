@@ -24,6 +24,10 @@
 			echo "<div class=\"theme_block\">" . $row_full['theme'] . "</div>";
 			echo "<div class=\"date_block\">" . $row_full['date'] . "</div>";
 			echo "<div class=\"clear\"></div>";
+			// Вставляем код комментов ВК
+			echo "<br><div id=\"vk_comments\"></div>";
+			echo "<script type=\"text/javascript\">VK.Widgets.Comments(\"vk_comments\", {limit: 10, width: \"665\", attach: false});</script>";
+			// End - Вставляем код комментов ВК
 		echo "</div><br>";
 	};
 ?>

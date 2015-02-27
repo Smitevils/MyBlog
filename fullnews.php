@@ -28,8 +28,14 @@
 	<!-- Плагин для обертки видео -->
 	<!-- http://fitvidsjs.com/ -->
 	<script src="js/jquery.fitvids.js"></script>
+	<!-- Скрипт комментов ВК -->
+	<script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
+	<!-- /Скрипт комментов ВК -->
 </head>
 <body>
+<!-- Скрипт комментов ВК - Инициализируем блок -->
+<script type="text/javascript">VK.init({apiId: 4803127, onlyWidgets: true});</script>
+<!-- /Скрипт комментов ВК - Инициализируем блок -->
 	<div class="left_block">
 		<div class="info_block">
 			<div class="photo_block">
