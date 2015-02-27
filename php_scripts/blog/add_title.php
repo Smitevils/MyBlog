@@ -17,20 +17,7 @@
 
 	// Выводим сами строки // выполняем по количеству строк в массиве
 	while($row_full = mysql_fetch_assoc($res_full)) { //Присваиваем новые значение массиву столько раз сколько строк в таблице
-		echo "<div class=\"post_block\">";
-			echo "<div class=\"title_block\">" . $row_full['title'] . "</div>";
-		echo "<div class=\"text_block\">" . $row_full['fullnews'] . "</div>";
-			echo "<div class=\"clear\"></div>";
-			echo "<div class=\"theme_block\">" . $row_full['theme'] . "</div>";
-			echo "<div class=\"date_block\">" . $row_full['date'] . "</div>";
-			// Вставляем код Pluso
-			include "php_scripts/pluso.php";
-			//
-			echo "<div class=\"clear\"></div>";
-			// Вставляем код комментов ВК
-			echo "<br><div id=\"vk_comments\"></div>";
-			echo "<script type=\"text/javascript\">VK.Widgets.Comments(\"vk_comments\", {limit: 10, width: \"665\", attach: false});</script>";
-			// End - Вставляем код комментов ВК
-		echo "</div><br>";
+
+			echo "<title>SmiteVils Blog - " . $row_full['title'] . "</title>";
 	};
 ?>

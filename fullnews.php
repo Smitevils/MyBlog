@@ -20,7 +20,10 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
-	<title>SmiteVils Blog - Article</title>
+	<?php
+		//Вставляем заголовок статьи
+		include "php_scripts/blog/add_title.php";
+	?>
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="stylesheet" href="styles/admin_panel.css">
