@@ -12,6 +12,8 @@
 	<title>SmiteVils Blog</title>
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/style.css">
+	<!-- Гугл Фонтс -->
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<script src="js/jquery-2.1.1.js"></script>
 	<!-- Плагин для обертки видео -->
 	<!-- http://fitvidsjs.com/ -->
@@ -21,7 +23,8 @@
 	<div class="left_block">
 		<div class="info_block">
 			<div class="photo_block">
-				<img src="img/avatars/profile_img150x150_1.JPG" class="avatar" alt="avatar">
+				<!-- <img src="img/avatars/profile_img150x150_1.JPG" class="avatar" alt="avatar"> -->
+				<div class="avatar"></div>
 			</div>
 			<h1>SmiteVils</h1>
 			<p style="text-align: center;">smitevils@yandex.ru</p>
@@ -45,6 +48,7 @@
 		?>
 		<div class="clear"></div>
 	</div>
+
 	<!-- Yandex Metrica and Google Analytics -->
 	<?php
 		include_once("php_scripts/metrika.php");

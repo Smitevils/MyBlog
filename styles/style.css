@@ -2,10 +2,24 @@
 body {
 	background-color: #1F253D;
 	color: #fff;
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+@media (max-width: 700px) {
+    body {
+        font-size: 10px;
+    }
 }
 
 xmp {
 	color: orange;
+	padding: 12px;
+	background: rgba(0,0,0,0.2);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
 }
 
 
@@ -14,7 +28,9 @@ xmp {
 
 /*.pluso-more {display: none !important;}*/
 
-a {color: #fff;}
+a {color: orange;}
+
+a.a_title{color: #fff;}
 
 .clear {clear: both;}
 
@@ -83,6 +99,8 @@ a {color: #fff;}
 	-o-transition: all 0.1s ease-in-out;
 	transition: all 0.1s ease-in-out;
 	cursor: pointer;
+	background: url(../img/avatars/profile_img150x150_1.JPG) center no-repeat;
+	background-size: 100% 100%;
 }
 
 .avatar:hover {
@@ -328,4 +346,3 @@ background: #fddfde;
 	<!-- http://fitvidsjs.com/ -->
 	End
 */
-

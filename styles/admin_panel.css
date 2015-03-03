@@ -97,3 +97,20 @@ input.submit {
 }
 
 .insert_img_preview {}
+
+/* Заголовок для блоков админ-панели */
+
+.form_headline {
+	background: #50597B;
+	text-align: center;
+	font-size: 18px;
+	padding: 10px 0;
+	cursor: pointer;
+}
+
+.div_hiden {
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+	overflow: hidden;
+}

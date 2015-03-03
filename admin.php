@@ -23,9 +23,13 @@
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="stylesheet" href="styles/admin_panel.css">
 	<script src="js/jquery-2.1.1.js"></script>
+	<!-- Гугл Фонтс -->
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<!-- Плагин для обертки видео -->
 	<!-- http://fitvidsjs.com/ -->
 	<script src="js/jquery.fitvids.js"></script>
+	<!-- Скрипт показа и скрытия рабочих панелей -->
+	<script src="js/show-panel.js"></script>
 </head>
 <body>
 	<div class="left_block">
@@ -43,30 +47,34 @@
 			include "engine/navigation.php";
 		?>
 		<div class="add_news_block">
-			<form action="php_scripts/admin/add_news.php" method="post">
-				<p><b>Введите заголовок статьи:</b></p>
-				<p><input class="title" type="text" name="title"></p>
-				<p><b>Выберете категорию:</b></p>
-				<!-- Моделим радио кнопки для выбора темы, кнопки из базы данных -->
-				<?php
-					// подключаемся к серверу с базой данных // Данные выданы провайдером
-					$link_for_categories = mysql_connect('localhost','smite211_smite','H@ng@11thepe0p1e') or die("ERROR: ".mysql_error());
-					// После подключения выбираем нужную базу данных
-					mysql_select_db($bd) or die("ERROR: ".mysql_error());
-					// Указываем кодировку в которой будем работать
-					mysql_set_charset('utf8');
-					// заносим все данные из таблицы
-					$categories = mysql_query("SELECT * FROM `categories` ORDER BY `id`");// Заносим в переменную все данные из таблицы
-					while($data=mysql_fetch_array($categories)) {// раскладываем на массив
-						echo '<input type="radio" class="theme" name="theme" value="'.$data['name'].'"> '.$data['name'].'<br>';
-					};
-				?>
-				<p><b>Введите текст анонса статьи:</b></p>
-				<p><textarea class="add_post_text" rows="10" cols="45" name="text"></textarea></p>
-				<p><b>Введите текст полной статьи:</b></p>
-				<p><textarea class="add_post_text_full" rows="10" cols="45" name="fulltext"></textarea></p>
-				<p><input class="submit" type="submit" value="Отправить"></p>
-			</form>
+			<div class="form_headline" id="headline_add_article">Добавить статью &#8595</div>
+			<!-- Блок hiden будет скрываться и показываться при нажатии -->
+			<div class="div_hiden" id="div_hiden_1">
+				<form action="php_scripts/admin/add_news.php" method="post">
+					<p><b>Введите заголовок статьи:</b></p>
+					<p><input class="title" type="text" name="title"></p>
+					<p><b>Выберете категорию:</b></p>
+					<!-- Моделим радио кнопки для выбора темы, кнопки из базы данных -->
+					<?php
+						// подключаемся к серверу с базой данных // Данные выданы провайдером
+						$link_for_categories = mysql_connect('localhost','smite211_smite','H@ng@11thepe0p1e') or die("ERROR: ".mysql_error());
+						// После подключения выбираем нужную базу данных
+						mysql_select_db($bd) or die("ERROR: ".mysql_error());
+						// Указываем кодировку в которой будем работать
+						mysql_set_charset('utf8');
+						// заносим все данные из таблицы
+						$categories = mysql_query("SELECT * FROM `categories` ORDER BY `id`");// Заносим в переменную все данные из таблицы
+						while($data=mysql_fetch_array($categories)) {// раскладываем на массив
+							echo '<input type="radio" class="theme" name="theme" value="'.$data['name'].'"> '.$data['name'].'<br>';
+						};
+					?>
+					<p><b>Введите текст анонса статьи:</b></p>
+					<p><textarea class="add_post_text" rows="10" cols="45" name="text"></textarea></p>
+					<p><b>Введите текст полной статьи:</b></p>
+					<p><textarea class="add_post_text_full" rows="10" cols="45" name="fulltext"></textarea></p>
+					<p><input class="submit" type="submit" value="Отправить"></p>
+				</form>
+			</div>
 		</div>
 		<div class="post_block">title
 			<script>
