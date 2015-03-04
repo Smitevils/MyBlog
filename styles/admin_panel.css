@@ -60,6 +60,7 @@ div.submit {
 	color: #fff;
 	border: none;
 	padding: 10px;
+	margin-right: 6px;
 	display: block;
 	cursor: pointer;
 	float: left;
@@ -119,9 +120,9 @@ div.submit {
 }
 
 .div_hiden {
-	-webkit-transition: all 1s;
-	-o-transition: all 1s;
-	transition: all 1s;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
 	overflow: hidden;
 }
 

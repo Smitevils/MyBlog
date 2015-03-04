@@ -32,6 +32,8 @@
 	<script src="js/show-panel.js"></script>
 	<!-- Скрипт Ajax для вывода данных статьи для редактирования -->
 	<script src="js/edit_ajax.js"></script>
+	<!-- Скрипт для вывода preview -->
+	<script src="js/preview.js"></script>
 </head>
 <body>
 	<div class="left_block">
@@ -113,7 +115,7 @@
 			<div class="div_hiden" id="div_hiden_1">
 				<form action="php_scripts/admin/add_news.php" method="post">
 					<p><b>Введите заголовок статьи:</b></p>
-					<p><input class="title" type="text" name="title"></p>
+					<p><input class="title" id="title" type="text" name="title"></p>
 					<p><b>Выберете категорию:</b></p>
 					<!-- Моделим радио кнопки для выбора темы, кнопки из базы данных -->
 					<?php
@@ -133,6 +135,7 @@
 					<p><textarea class="add_post_text" rows="10" cols="45" name="text"></textarea></p>
 					<p><b>Введите текст полной статьи:</b></p>
 					<p><textarea class="add_post_text_full" rows="10" cols="45" name="fulltext"></textarea></p>
+					<p><div class="submit" id="showPreviewAdd">Preview</div></p>
 					<p><input class="submit" type="submit" value="Отправить"></p>
 				</form>
 			</div>
@@ -186,22 +189,14 @@
 					<p><b>Исправьте текст полной статьи:</b></p>
 					<p><textarea id="edit_fulltext" class="add_post_text_full" rows="10" cols="45" name="edit_fulltext"></textarea></p>
 					<label><input type="checkbox" name="edit_delite" /> Удалить </label>
+					<p><div class="submit" id="showPreviewEdit">Preview</div></p>
 					<p><input class="submit" type="submit" value="Edit"></p>
 				</form>
 			</div>
 		</div>
 		<!-- Блок - Превью -->
 		<div class="post_block">
-			<script>
-				var title = "";
-				var fulltext = "";
-				function sec() {
-					title = $(".title").val();
-					fulltext = $(".add_post_text_full").val();
-					$(".post_block").html("<a class='a_title' href='#'>"+title+"</a><div class='text_block'>"+fulltext+"</div>");
-				}
-				setInterval(sec, 1000) // использовать функцию
-			</script>
+			<div id="preview"></div>
 		</div>
 		<div class="clear"></div>
 	</div>
