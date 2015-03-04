@@ -2,6 +2,7 @@ var id_article = 0;
 
 function sendAjax(id)  {
     id_article = id;
+    $("#edit_id").attr('value', id_article);
     /*alert(id_article)*/
 
     /* Ajax */
@@ -15,7 +16,7 @@ function sendAjax(id)  {
             /**/
             data = data.split(/[*]/);
 
-            alert(data);
+            //alert(data);
             $("#edit_title").attr('value', data[0]); // выводим информацию в нужный блок
             $("#edit_text").val(data[1]); // выводим информацию в нужный блок
             $("#edit_fulltext").val(data[2]); // выводим информацию в нужный блок

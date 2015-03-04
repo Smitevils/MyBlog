@@ -142,7 +142,8 @@
 			<div class="form_headline" id="headline_edit_article">Редактировать статью &#8595</div>
 			<!-- Блок hiden будет скрываться и показываться при нажатии -->
 			<div class="div_hiden" id="div_hiden_2">
-				<form action="php_scripts/admin/add_news.php" method="post">
+				<form action="php_scripts/admin/edit_news.php" method="post">
+					<input id="edit_id" type="hidden" name="edit_id">
 					<p><b>Выбрать статью</b></p>
 					<p>
 						<select id="select_1" onchange="sendAjax(this.value)">
@@ -164,7 +165,7 @@
 						<!-- <div class="submit" onclick="findForId(352)">Редактировать</div> -->
 					</p>
 					<p><b>Исправьте заголовок статьи:</b></p>
-					<p><input id="edit_title" class="title" type="text" name="title"></p>
+					<p><input id="edit_title" class="title" type="text" name="edit_title"></p>
 					<p><b>Измените категорию:</b></p>
 					<!-- Моделим радио кнопки для выбора темы, кнопки из базы данных -->
 					<?php
@@ -177,13 +178,13 @@
 						// заносим все данные из таблицы
 						$categories = mysql_query("SELECT * FROM `categories` ORDER BY `id`");// Заносим в переменную все данные из таблицы
 						while($data=mysql_fetch_array($categories)) {// раскладываем на массив
-							echo '<input type="radio" class="theme" name="theme" value="'.$data['name'].'"> '.$data['name'].'<br>';
+							echo '<input type="radio" class="theme" name="'.$data['name'].'" value="'.$data['name'].'"> '.$data['name'].'<br>';
 						};
 					?>
 					<p><b>Исправьте текст анонса статьи:</b></p>
-					<p><textarea id="edit_text" class="add_post_text" value="defgsdg" rows="10" cols="45" name="text"></textarea></p>
+					<p><textarea id="edit_text" class="add_post_text" value="defgsdg" rows="10" cols="45" name="edit_text"></textarea></p>
 					<p><b>Исправьте текст полной статьи:</b></p>
-					<p><textarea id="edit_fulltext" class="add_post_text_full" rows="10" cols="45" name="fulltext"></textarea></p>
+					<p><textarea id="edit_fulltext" class="add_post_text_full" rows="10" cols="45" name="edit_fulltext"></textarea></p>
 					<p><input class="submit" type="submit" value="Отправить"></p>
 				</form>
 			</div>
