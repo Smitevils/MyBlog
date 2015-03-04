@@ -185,7 +185,8 @@
 					<p><textarea id="edit_text" class="add_post_text" value="defgsdg" rows="10" cols="45" name="edit_text"></textarea></p>
 					<p><b>Исправьте текст полной статьи:</b></p>
 					<p><textarea id="edit_fulltext" class="add_post_text_full" rows="10" cols="45" name="edit_fulltext"></textarea></p>
-					<p><input class="submit" type="submit" value="Отправить"></p>
+					<label><input type="checkbox" name="edit_delite" /> Удалить </label>
+					<p><input class="submit" type="submit" value="Edit"></p>
 				</form>
 			</div>
 		</div>

@@ -10,11 +10,17 @@
 	// Указываем кодировку в которой будем работать
 	mysql_set_charset('utf8');
 
-	if (isset($_POST['edit_id'])) {$edit_id = $_POST['edit_id'];} else {$edit_id = 0;}
+	if (isset($_POST['edit_id'])) {$edit_id = $_POST['edit_id'];} else {$edit_id = 0;};
+	if (isset($_POST['edit_delite'])) {$edit_delite = $_POST['edit_delite'];} else {$edit_delite = "off";};
 
 	// Создаем переменную res и заносим туда все данные из таблицы users построчно
 	$res = mysql_query("SELECT * FROM `blog` WHERE id='$edit_id'");
 
+	if ($edit_delite == "on") {
+		mysql_query("DELETE FROM `blog` WHERE `id` = '$edit_id';");
+		echo $edit_id."delited";
+		die(); exit();
+	};
 
 	//Вносим в переменную текст из глобального массива $_POST
 	if (isset($_POST['edit_text'])) {$news = $_POST['edit_text'];} else {$news = "none";};

@@ -9,7 +9,7 @@ $(document).ready(function(){
 			$('#div_hiden_1').css( "max-height", "0" )
 			add_article = false;
 		} else {
-			$('#div_hiden_1').css( "max-height", "999px" )
+			$('#div_hiden_1').css( "max-height", "3000px" )
 			add_article = true;
 		}
 	};
@@ -20,7 +20,7 @@ $(document).ready(function(){
 			$('#div_hiden_2').css( "max-height", "0" )
 			edit_article = false;
 		} else {
-			$('#div_hiden_2').css( "max-height", "999px" )
+			$('#div_hiden_2').css( "max-height", "3000px" )
 			edit_article = true;
 		}
 	};
