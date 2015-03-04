@@ -30,6 +30,8 @@
 	<script src="js/jquery.fitvids.js"></script>
 	<!-- Скрипт показа и скрытия рабочих панелей -->
 	<script src="js/show-panel.js"></script>
+	<!-- Скрипт Ajax для вывода данных статьи для редактирования -->
+	<script src="js/edit_ajax.js"></script>
 </head>
 <body>
 	<div class="left_block">
@@ -39,60 +41,7 @@
 			</div>
 			<h1>Admin</h1>
 		</div>
-		<div class="clear"></div>
-	</div>
-	<div class="right_block">
-		<?php
-			// вставляем меню
-			include "engine/navigation.php";
-		?>
-		<div class="add_news_block">
-			<div class="form_headline" id="headline_add_article">Добавить статью &#8595</div>
-			<!-- Блок hiden будет скрываться и показываться при нажатии -->
-			<div class="div_hiden" id="div_hiden_1">
-				<form action="php_scripts/admin/add_news.php" method="post">
-					<p><b>Введите заголовок статьи:</b></p>
-					<p><input class="title" type="text" name="title"></p>
-					<p><b>Выберете категорию:</b></p>
-					<!-- Моделим радио кнопки для выбора темы, кнопки из базы данных -->
-					<?php
-						// подключаемся к серверу с базой данных // Данные выданы провайдером
-						$link_for_categories = mysql_connect('localhost','smite211_smite','H@ng@11thepe0p1e') or die("ERROR: ".mysql_error());
-						// После подключения выбираем нужную базу данных
-						mysql_select_db($bd) or die("ERROR: ".mysql_error());
-						// Указываем кодировку в которой будем работать
-						mysql_set_charset('utf8');
-						// заносим все данные из таблицы
-						$categories = mysql_query("SELECT * FROM `categories` ORDER BY `id`");// Заносим в переменную все данные из таблицы
-						while($data=mysql_fetch_array($categories)) {// раскладываем на массив
-							echo '<input type="radio" class="theme" name="theme" value="'.$data['name'].'"> '.$data['name'].'<br>';
-						};
-					?>
-					<p><b>Введите текст анонса статьи:</b></p>
-					<p><textarea class="add_post_text" rows="10" cols="45" name="text"></textarea></p>
-					<p><b>Введите текст полной статьи:</b></p>
-					<p><textarea class="add_post_text_full" rows="10" cols="45" name="fulltext"></textarea></p>
-					<p><input class="submit" type="submit" value="Отправить"></p>
-				</form>
-			</div>
-		</div>
-		<div class="post_block">title
-			<script>
-				var title = "";
-				var fulltext = "";
-				function sec() {
-					title = $(".title").val();
-					fulltext = $(".add_post_text_full").val();
-					$(".post_block").html("<a class='a_title' href='#'>"+title+"</a><div class='text_block'>"+fulltext+"</div>");
-				}
-				setInterval(sec, 100) // использовать функцию
-			</script>
-		</div>
-		<div class="clear"></div>
-	</div>
-
-	<!-- Блок для генерации кода картинки -->
-	<div class="left_block">
+		<!-- Блок для генерации кода картинки -->
 		<div class="insert_img_block">
 			<h4>Вставка картинки:</h4>
 			<!-- Выбор горизонтали -->
@@ -149,7 +98,110 @@
 			};
 			//setInterval(secSecond, 3000) // использовать функцию
 		</script>
+		<!-- /Блок для генерации кода картинки -->
+		<div class="clear"></div>
 	</div>
-	<!-- /Блок для генерации кода картинки -->
+	<div class="right_block">
+		<?php
+			// вставляем меню
+			include "engine/navigation.php";
+		?>
+		<!-- Блок - Добавить новость -->
+		<div class="add_news_block">
+			<div class="form_headline" id="headline_add_article">Добавить статью &#8595</div>
+			<!-- Блок hiden будет скрываться и показываться при нажатии -->
+			<div class="div_hiden" id="div_hiden_1">
+				<form action="php_scripts/admin/add_news.php" method="post">
+					<p><b>Введите заголовок статьи:</b></p>
+					<p><input class="title" type="text" name="title"></p>
+					<p><b>Выберете категорию:</b></p>
+					<!-- Моделим радио кнопки для выбора темы, кнопки из базы данных -->
+					<?php
+						// подключаемся к серверу с базой данных // Данные выданы провайдером
+						$link_for_categories = mysql_connect('localhost','smite211_smite','H@ng@11thepe0p1e') or die("ERROR: ".mysql_error());
+						// После подключения выбираем нужную базу данных
+						mysql_select_db($bd) or die("ERROR: ".mysql_error());
+						// Указываем кодировку в которой будем работать
+						mysql_set_charset('utf8');
+						// заносим все данные из таблицы
+						$categories = mysql_query("SELECT * FROM `categories` ORDER BY `id`");// Заносим в переменную все данные из таблицы
+						while($data=mysql_fetch_array($categories)) {// раскладываем на массив
+							echo '<input type="radio" class="theme" name="theme" value="'.$data['name'].'"> '.$data['name'].'<br>';
+						};
+					?>
+					<p><b>Введите текст анонса статьи:</b></p>
+					<p><textarea class="add_post_text" rows="10" cols="45" name="text"></textarea></p>
+					<p><b>Введите текст полной статьи:</b></p>
+					<p><textarea class="add_post_text_full" rows="10" cols="45" name="fulltext"></textarea></p>
+					<p><input class="submit" type="submit" value="Отправить"></p>
+				</form>
+			</div>
+		</div>
+		<!-- Блок - Редактировать статью -->
+		<div class="add_news_block">
+			<div class="form_headline" id="headline_edit_article">Редактировать статью &#8595</div>
+			<!-- Блок hiden будет скрываться и показываться при нажатии -->
+			<div class="div_hiden" id="div_hiden_2">
+				<form action="php_scripts/admin/add_news.php" method="post">
+					<p><b>Выбрать статью</b></p>
+					<p>
+						<select id="select_1" onchange="sendAjax(this.value)">
+							<!-- Моделим пункты выпадающего меню -->
+							<?php
+								// подключаемся к серверу с базой данных // Данные выданы провайдером
+								$link_for_categories = mysql_connect('localhost','smite211_smite','H@ng@11thepe0p1e') or die("ERROR: ".mysql_error());
+								// После подключения выбираем нужную базу данных
+								mysql_select_db($bd) or die("ERROR: ".mysql_error());
+								// Указываем кодировку в которой будем работать
+								mysql_set_charset('utf8');
+								// заносим все данные из таблицы
+								$categories = mysql_query("SELECT * FROM `blog` ORDER BY `id`");// Заносим в переменную все данные из таблицы
+								while($data=mysql_fetch_array($categories)) {// раскладываем на массив
+									echo '<option value="'.$data['id'].'"> '.$data['id'].' - '.$data['title'].'</option>';
+								};
+							?>
+						</select>
+						<!-- <div class="submit" onclick="findForId(352)">Редактировать</div> -->
+					</p>
+					<p><b>Исправьте заголовок статьи:</b></p>
+					<p><input id="edit_title" class="title" type="text" name="title"></p>
+					<p><b>Измените категорию:</b></p>
+					<!-- Моделим радио кнопки для выбора темы, кнопки из базы данных -->
+					<?php
+						// подключаемся к серверу с базой данных // Данные выданы провайдером
+						$link_for_categories = mysql_connect('localhost','smite211_smite','H@ng@11thepe0p1e') or die("ERROR: ".mysql_error());
+						// После подключения выбираем нужную базу данных
+						mysql_select_db($bd) or die("ERROR: ".mysql_error());
+						// Указываем кодировку в которой будем работать
+						mysql_set_charset('utf8');
+						// заносим все данные из таблицы
+						$categories = mysql_query("SELECT * FROM `categories` ORDER BY `id`");// Заносим в переменную все данные из таблицы
+						while($data=mysql_fetch_array($categories)) {// раскладываем на массив
+							echo '<input type="radio" class="theme" name="theme" value="'.$data['name'].'"> '.$data['name'].'<br>';
+						};
+					?>
+					<p><b>Исправьте текст анонса статьи:</b></p>
+					<p><textarea id="edit_text" class="add_post_text" value="defgsdg" rows="10" cols="45" name="text"></textarea></p>
+					<p><b>Исправьте текст полной статьи:</b></p>
+					<p><textarea id="edit_fulltext" class="add_post_text_full" rows="10" cols="45" name="fulltext"></textarea></p>
+					<p><input class="submit" type="submit" value="Отправить"></p>
+				</form>
+			</div>
+		</div>
+		<!-- Блок - Превью -->
+		<div class="post_block">
+			<script>
+				var title = "";
+				var fulltext = "";
+				function sec() {
+					title = $(".title").val();
+					fulltext = $(".add_post_text_full").val();
+					$(".post_block").html("<a class='a_title' href='#'>"+title+"</a><div class='text_block'>"+fulltext+"</div>");
+				}
+				setInterval(sec, 1000) // использовать функцию
+			</script>
+		</div>
+		<div class="clear"></div>
+	</div>
 </body>
 </html>

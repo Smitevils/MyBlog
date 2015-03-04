@@ -55,6 +55,15 @@ input.submit {
 	padding: 10px;
 }
 
+div.submit {
+	background-color: #50597B;
+	color: #fff;
+	border: none;
+	padding: 10px;
+	display: inline-block;
+	cursor: pointer;
+}
+
 /* Обертка для блока вставки картинки */
 .left_block_for_insert_img_block {
 	width: 30%;
@@ -113,4 +122,10 @@ input.submit {
 	-o-transition: all 1s;
 	transition: all 1s;
 	overflow: hidden;
+}
+
+select {
+	cursor: pointer;
+	background: #50597B;
+	padding: 7px;
 }
