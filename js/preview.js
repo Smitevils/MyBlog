@@ -5,6 +5,7 @@ $(document).ready(function(){
 		var text = $(".add_post_text").val();
 		var fulltext = $(".add_post_text_full").val();
 		$("#preview").html("<a class='a_title' href='#'>"+title+"</a><div class='text_block' style='border: 1px orange solid;'>"+text+"</div><div class='clear'></div><br><div class='text_block' style='border: 1px orange solid;'>"+fulltext+"</div>");
+		$('#here').click();
 	};
 
 	function showPreviewEditNews(){
@@ -12,6 +13,7 @@ $(document).ready(function(){
 		var text = $("#edit_text").val();
 		var fulltext = $("#edit_fulltext").val();
 		$("#preview").html("<a class='a_title' href='#'>"+title+"</a><div class='text_block' style='border: 1px orange solid;'>"+text+"</div><div class='clear'></div><br><div class='text_block' style='border: 1px orange solid;'>"+fulltext+"</div>");
+		$('#here').click();
 	};
 
 	$('#showPreviewAdd').click( function() { showPreviewAddNews(); } );

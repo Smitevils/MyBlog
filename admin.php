@@ -34,6 +34,8 @@
 	<script src="js/edit_ajax.js"></script>
 	<!-- Скрипт для вывода preview -->
 	<script src="js/preview.js"></script>
+	<!-- Скролл -->
+	<script type='text/javascript' src='js/jquery.scrollTo-1.4.3.1.js'></script>
 </head>
 <body>
 	<div class="left_block">
@@ -150,6 +152,7 @@
 					<p><b>Выбрать статью</b></p>
 					<p>
 						<select id="select_1" onchange="sendAjax(this.value)">
+							<option value="0">Выбери статью...</option>
 							<!-- Моделим пункты выпадающего меню -->
 							<?php
 								// подключаемся к серверу с базой данных // Данные выданы провайдером
@@ -197,6 +200,7 @@
 		<!-- Блок - Превью -->
 		<div class="post_block">
 			<div id="preview"></div>
+			<a href="#preview" id="here" class="scroll" style="display: none;">Нажмешь, перематаю!</a>
 		</div>
 		<div class="clear"></div>
 	</div>
