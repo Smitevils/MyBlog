@@ -22,6 +22,23 @@ xmp {
 	border-radius: 4px;
 }
 
+.basket {
+	color: #fff;
+	padding: 12px;
+	background: rgba(0,0,0,0.2);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.orange {color: orange;}
+.red {color: red;}
+.blue {color: blue;}
+.white {color: white;}
+.black {color: black;}
+
 
 #vk_comments {width:100% !important;}
 #vk_comments iframe {width:100% !important;}

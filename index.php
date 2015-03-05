@@ -32,20 +32,10 @@
 		<div class="clear"></div>
 	</div>
 	<div class="right_block">
-		<?php
-			// вставляем меню
-			include "engine/navigation.php";
-		?>
-		<div class="links_to_pages_block">
-			<?php
-				// запускаем массив для создания ссылок на эти страницы
-				include "php_scripts/blog/add_links.php";
-			?>
-		</div>
-		<?php
-			//Выводим сами строки
-			include "php_scripts/blog/add_posts.php";
-		?>
+		<?php /* вставляем меню */ include "engine/navigation.php"; ?>
+		<?php /* создаем ссылки на страницы */ include "php_scripts/blog/add_links.php"; ?>
+		<?php /* Выводим сами строки */ include "php_scripts/blog/add_posts.php";?>
+		<?php /* еще раз создаем ссылки на страницы */ include "php_scripts/blog/add_links.php"; ?>
 		<div class="clear"></div>
 	</div>
 

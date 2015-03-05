@@ -12,7 +12,7 @@
 			echo "<div class=\"date_block\">" . $row['date'] . "</div>";
 			echo "<div class=\"clear\"></div>";
 		echo "</div><br>";
-		//<div class=\"date_block\">". $row['date'] . "</div>
 	};
+	echo "<div class=\"clear\"></div>";
 ?>
 

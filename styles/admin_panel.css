@@ -77,11 +77,12 @@ div.submit {
 .insert_img_block {
 	width: 89%;
 	padding: 0px 2%;
-	min-height: 100px;
+	min-height: 10px;
 	background-color: #394264;
 	margin: 5%;
 	margin-right: 2%;
 	margin-top: 0px;
+	padding-top: 20px;
 	padding-bottom: 20px;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
