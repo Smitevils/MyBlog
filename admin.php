@@ -139,6 +139,7 @@
 					<p><textarea class="add_post_text" rows="10" cols="45" name="text"></textarea></p>
 					<p><b>Введите текст полной статьи:</b></p>
 					<p><textarea class="add_post_text_full" rows="10" cols="45" name="fulltext"></textarea></p>
+					<label><input type="checkbox" name="status" /> Готовность </label>
 					<p><div class="submit" id="showPreviewAdd">Preview</div></p>
 					<p><input class="submit" type="submit" value="Отправить"></p>
 				</form>
@@ -166,7 +167,7 @@
 								// заносим все данные из таблицы
 								$categories = mysql_query("SELECT * FROM `blog` ORDER BY `id`");// Заносим в переменную все данные из таблицы
 								while($data=mysql_fetch_array($categories)) {// раскладываем на массив
-									echo '<option value="'.$data['id'].'"> '.$data['id'].' - '.$data['title'].'</option>';
+									echo '<option value="'.$data['id'].'"> '.$data['status'].' - '.$data['id'].' - '.$data['title'].'</option>';
 								};
 							?>
 						</select>
@@ -186,14 +187,15 @@
 						// заносим все данные из таблицы
 						$categories = mysql_query("SELECT * FROM `categories` ORDER BY `id`");// Заносим в переменную все данные из таблицы
 						while($data=mysql_fetch_array($categories)) {// раскладываем на массив
-							echo '<input type="radio" class="theme" name="'.$data['name'].'" value="'.$data['name'].'"> '.$data['name'].'<br>';
+							echo '<input type="radio" id="theme_'.$data['name'].'" class="theme" name="edit_theme" value="'.$data['name'].'"> '.$data['name'].'<br>';
 						};
 					?>
 					<p><b>Исправьте текст анонса статьи:</b></p>
 					<p><textarea id="edit_text" class="add_post_text" value="defgsdg" rows="10" cols="45" name="edit_text"></textarea></p>
 					<p><b>Исправьте текст полной статьи:</b></p>
 					<p><textarea id="edit_fulltext" class="add_post_text_full" rows="10" cols="45" name="edit_fulltext"></textarea></p>
-					<label><input type="checkbox" name="edit_delite" /> Удалить </label>
+					<p><label><input type="checkbox" id="edit_status" name="status" /> Готовность </label></p>
+					<p><label><input type="checkbox" name="edit_delite" /> Удалить </label></p>
 					<p><div class="submit" id="showPreviewEdit">Preview</div></p>
 					<p><input class="submit" type="submit" value="Edit"></p>
 				</form>

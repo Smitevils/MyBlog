@@ -33,9 +33,10 @@
 	// Создаем переменную res и заносим туда все данные из таблицы blog
 	// LIMIT вызывается с двумя параметрами - с какой записи начинать, и сколько выводить
 	if ($theme == "home") {// если темы нет то выводим все...
-		$res = mysql_query("SELECT * FROM `blog` ORDER BY `id` DESC LIMIT $page,$per_page");
+		//добавил условие проверки по статусу  WHERE `status`='ready'
+		$res = mysql_query("SELECT * FROM `blog` WHERE `status`='ready' ORDER BY `id` DESC LIMIT $page,$per_page");
 	} else {// ...если тема есть то выводим только по теме
-		$res = mysql_query("SELECT * FROM `blog` WHERE `theme`='$theme' ORDER BY `id` DESC LIMIT $page,$per_page");
+		$res = mysql_query("SELECT * FROM `blog` WHERE `theme`='$theme' AND `status`='ready' ORDER BY `id` DESC LIMIT $page,$per_page");
 	};
 
 

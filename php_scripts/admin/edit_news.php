@@ -10,6 +10,9 @@
 	// Указываем кодировку в которой будем работать
 	mysql_set_charset('utf8');
 
+	//chechbox
+	if (isset($_POST['status'])) {$status = "ready";} else {$status = "unready";};
+
 	if (isset($_POST['edit_id'])) {$edit_id = $_POST['edit_id'];} else {$edit_id = 0;};
 	if (isset($_POST['edit_delite'])) {$edit_delite = $_POST['edit_delite'];} else {$edit_delite = "off";};
 
@@ -42,7 +45,7 @@
 
 	if ($news != "") {
 		//mysql_query(" INSERT INTO `blog` (`text`) VALUES ('$news') ",$link); // рабочий
-		mysql_query("UPDATE `blog` SET title='$title', text='$news', fullnews='$fullnews' WHERE id='$edit_id'",$link);
+		mysql_query("UPDATE `blog` SET title='$title', text='$news', fullnews='$fullnews', status='$status', theme='$theme' WHERE id='$edit_id'",$link);
 		//mysql_query(" INSERT INTO `blog` (`date`) VALUES ('$date') ",$link);
 		//echo "Новость добавлена!";
 		//echo 'news=' . $news;

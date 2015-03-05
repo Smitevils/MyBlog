@@ -12,6 +12,9 @@
 	// Создаем переменную res и заносим туда все данные из таблицы users построчно
 	$res = mysql_query("SELECT * FROM `blog`");
 
+	//chechbox
+	if (isset($_POST['status'])) {$status = "ready";} else {$status = "unready";};
+
 	//Вносим в переменную текст из глобального массива $_POST
 	if (isset($_POST['text'])) {$news = $_POST['text'];} else {$news = "none";};
 	if ($news == "") {$news = "none";};
@@ -32,7 +35,7 @@
 
 	if ($news != "") {
 		//mysql_query(" INSERT INTO `blog` (`text`) VALUES ('$news') ",$link); // рабочий
-		mysql_query(" INSERT INTO `blog`(`title`, `text`, `fullnews`, `theme`, `date`) VALUES ('$title','$news','$fullnews','$theme','$date') ",$link);
+		mysql_query(" INSERT INTO `blog`(`title`, `text`, `fullnews`, `theme`, `date`, `status`) VALUES ('$title','$news','$fullnews','$theme','$date','$status') ",$link);
 		//mysql_query(" INSERT INTO `blog` (`date`) VALUES ('$date') ",$link);
 		//echo "Новость добавлена!";
 		//echo 'news=' . $news;
