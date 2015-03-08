@@ -358,8 +358,44 @@ margin-bottom: 2em;
 background: #fddfde;
 }
 
-/*
-	<!-- Плагин для обертки видео -->
-	<!-- http://fitvidsjs.com/ -->
-	End
-*/
+
+
+/* Обертка для блока подписки */
+
+.mail_subscribe {
+	width: 89%;
+	padding: 0px 2%;
+	min-height: 10px;
+	background-color: #394264;
+	margin: 5%;
+	margin-right: 2%;
+	margin-top: 0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+	float: left;
+	text-align: center;
+}
+
+input.submit {
+	background-color: #50597B;
+	color: #fff;
+	border: none;
+	padding: 10px;
+}
+
+input.email {
+	resize: none;
+	width: 70%;
+	padding: 2%;
+	outline: none;
+	background-color: #50597B;
+	color: #fff;
+	border: none;
+	text-align: center;
+}
+

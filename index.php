@@ -29,6 +29,14 @@
 			<h1>SmiteVils</h1>
 			<p style="text-align: center;">smitevils@yandex.ru</p>
 		</div>
+		<div class="mail_subscribe">
+			<h3>Подпишись на обновления:</h3>
+			<form action="php_scripts/subscribe.php" method="post">
+				<p><b>Введите ваш Email:</b></p>
+				<p><input class="email" type="text" name="email"></p>
+				<p><input class="submit" type="submit" value="Подписаться"></p>
+			</form>
+		</div>
 		<div class="clear"></div>
 	</div>
 	<div class="right_block">
