@@ -21,7 +21,7 @@
 	<!-- Add fancyBox main JS and CSS files -->
 	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
 	<script type="text/javascript" src="source/jquery.fancybox.me.js"></script>
-	<link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
 	<!-- Скрипт Ajax для подписки на новости и вывода попап сообщения -->
 	<script src="js/subscribe_ajax.js"></script>
 </head>
