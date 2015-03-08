@@ -11,15 +11,12 @@ body {
     }
 }
 
-xmp {
-	color: orange;
-	padding: 12px;
-	background: rgba(0,0,0,0.2);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
-	border-radius: 4px;
+.fancybox-custom .fancybox-skin {
+box-shadow: 0 0 50px #222;
+}
+
+a.fancybox {
+	display: none;
 }
 
 .basket {
@@ -399,3 +396,18 @@ input.email {
 	text-align: center;
 }
 
+input.email:hover {
+	outline: 1px #95ABF9 solid;
+}
+
+div.submit {
+	background-color: #50597B;
+	color: #fff;
+	border: none;
+	padding: 10px;
+	margin-right: 6px;
+	display: block;
+	cursor: pointer;
+	width: 100px;
+	margin: 0 auto;
+}

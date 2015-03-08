@@ -24,6 +24,10 @@
 	color: #fff;
 }
 
+.add_post_text:hover {
+	outline: 1px #95ABF9 solid;
+}
+
 .add_post_text_full {
 	resize: none;
 	width: 96%;
@@ -34,6 +38,10 @@
 	color: #fff;
 }
 
+.add_post_text_full:hover {
+	outline: 1px #95ABF9 solid;
+}
+
 input.title {
 	resize: none;
 	width: 96%;
@@ -42,6 +50,10 @@ input.title {
 	background-color: #50597B;
 	color: #fff;
 	border: none;
+}
+
+input.title:hover {
+	outline: 1px #95ABF9 solid;
 }
 
 input.theme {

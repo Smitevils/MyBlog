@@ -18,6 +18,12 @@
 	<!-- Плагин для обертки видео -->
 	<!-- http://fitvidsjs.com/ -->
 	<script src="js/jquery.fitvids.js"></script>
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+	<script type="text/javascript" src="source/jquery.fancybox.me.js"></script>
+	<link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<!-- Скрипт Ajax для подписки на новости и вывода попап сообщения -->
+	<script src="js/subscribe_ajax.js"></script>
 </head>
 <body>
 	<div class="left_block">
@@ -33,8 +39,9 @@
 			<h3>Подпишись на обновления:</h3>
 			<form action="php_scripts/subscribe.php" method="post">
 				<p><b>Введите ваш Email:</b></p>
-				<p><input class="email" type="text" name="email"></p>
-				<p><input class="submit" type="submit" value="Подписаться"></p>
+				<p><input class="email" id="email" type="text" name="email"></p>
+				<!-- <p><input class="submit" type="submit" value="Подписаться"></p> -->
+				<div class="submit" onclick="sendAjaxSubscribe()">Подписаться</div>
 			</form>
 		</div>
 		<div class="clear"></div>
@@ -61,6 +68,12 @@
 	  });
 	</script>
 	<!-- End fitVids -->
+
+
+<div id="popup" style="display: none;">
+	<p id="subscribe_alert">12345</p>
+</div>
+<a href="#popup" id="a_popup" class="fancybox">ссылка</a>
 
 </body>
 </html>

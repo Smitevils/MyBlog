@@ -1,6 +1,4 @@
 <?php
-	// Так как в include есть какието header, перенаправление делаем в начале скрипта, а скрипт будет выполнен до конца.
-	header('Location: ../index.php');
 	// Подключаю названия БД
 	include "../data/bd.php";
 	// подключаемся к серверу с базой данных // Данные выданы провайдером
@@ -17,6 +15,8 @@
 
 
 	mysql_query(" INSERT INTO `subscribe`(`email`) VALUES ('$email') ",$link);
+
+	echo json_encode(true);
 
   	exit;
 ?>
