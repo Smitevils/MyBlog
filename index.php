@@ -71,7 +71,7 @@
 
 
 <div id="popup" style="display: none;">
-	<p id="subscribe_alert">12345</p>
+	<p id="subscribe_alert" style="line-height: 100px;">12345</p>
 </div>
 <a href="#popup" id="a_popup" class="fancybox">ссылка</a>
 

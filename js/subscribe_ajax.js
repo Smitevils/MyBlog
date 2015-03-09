@@ -23,8 +23,16 @@ function sendAjaxToPHP() {
         data: "email="+email,
         success: function(data) {
             //alert(data);
-            $("#subscribe_alert").html('Вы успешно подписаны на рассылку!');
-            $(".fancybox").click();
+            // Скрипт php будет возвращать в переменную data true или false в зависимости
+            // от того есть ли в базе данных введенный емэйл или нет. На основе этого
+            // выводим нужное сообщение
+            if (data == 'true') {
+                $("#subscribe_alert").html('Вы успешно подписаны на рассылку!');
+                $(".fancybox").click();
+            } else if (data == 'false') {
+                $("#subscribe_alert").html('Такой email уже существует!');
+                $(".fancybox").click();
+            };
         }
     });
 };
