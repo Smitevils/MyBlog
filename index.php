@@ -10,18 +10,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<title>SmiteVils Blog</title>
+	<!-- Внешние стили -->
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/style.css">
+	<!-- Add fancyBox main CSS -->
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
 	<!-- Гугл Фонтс -->
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<script src="js/jquery-2.1.1.js"></script>
 	<!-- Плагин для обертки видео -->
 	<!-- http://fitvidsjs.com/ -->
 	<script src="js/jquery.fitvids.js"></script>
-	<!-- Add fancyBox main JS and CSS files -->
+	<!-- Add fancyBox main JS files -->
 	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
 	<script type="text/javascript" src="source/jquery.fancybox.me.js"></script>
-	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
 	<!-- Скрипт Ajax для подписки на новости и вывода попап сообщения -->
 	<script src="js/subscribe_ajax.js"></script>
 </head>

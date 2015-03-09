@@ -15,8 +15,6 @@ body {
 box-shadow: 0 0 50px #222;
 }
 
-.fancybox-inner {}
-
 a.fancybox {
 	display: none;
 }
@@ -117,12 +115,6 @@ a.a_title{color: #fff;}
 	cursor: pointer;
 	background: url(../img/avatars/profile_img150x150_1.JPG) center no-repeat;
 	background-size: 100% 100%;
-}
-
-.avatar:hover {
-	width: 140px;
-	height: 140px;
-	border: 10px #50597B solid;
 }
 
 .info_block h1 {text-align: center; font-size: 24px; }
