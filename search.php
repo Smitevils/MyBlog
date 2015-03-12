@@ -51,9 +51,7 @@
 	</div>
 	<div class="right_block">
 		<?php /* вставляем меню */ include "engine/navigation.php"; ?>
-		<?php /* создаем ссылки на страницы */ include "php_scripts/blog/add_links.php"; ?>
-		<?php /* Выводим сами строки */ include "php_scripts/blog/add_posts.php";?>
-		<?php /* еще раз создаем ссылки на страницы */ include "php_scripts/blog/add_links.php"; ?>
+		<?php /* вставляем ссылки на статьи из поиска */ include "php_scripts/blog/search.php"; ?>
 		<div class="clear"></div>
 	</div>
 

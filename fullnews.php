@@ -50,6 +50,7 @@
 			<h1>SmiteVils</h1>
 			<p style="text-align: center;">smitevils@yandex.ru</p>
 		</div>
+		<?php /* вставляем блок поиска */ include "engine/searchblock.php"; ?>
 		<div class="clear"></div>
 	</div>
 	<div class="right_block">

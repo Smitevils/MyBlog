@@ -390,6 +390,17 @@ input.email {
 	text-align: center;
 }
 
+input.search {
+	resize: none;
+	width: 70%;
+	padding: 2%;
+	outline: none;
+	background-color: #50597B;
+	color: #fff;
+	border: none;
+	text-align: center;
+}
+
 input.email:hover {
 	outline: 1px #95ABF9 solid;
 }
@@ -404,4 +415,25 @@ div.submit {
 	cursor: pointer;
 	width: 100px;
 	margin: 0 auto;
+}
+
+/* Обертка для блока search */
+
+.search_wrap {
+	width: 89%;
+	padding: 0px 2%;
+	min-height: 10px;
+	background-color: #394264;
+	margin: 5%;
+	margin-right: 2%;
+	margin-top: 0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+	float: left;
+	text-align: center;
 }
