@@ -72,10 +72,8 @@ div.submit {
 	color: #fff;
 	border: none;
 	padding: 10px;
-	margin-right: 6px;
 	display: block;
 	cursor: pointer;
-	float: left;
 }
 
 /* Обертка для блока вставки картинки */

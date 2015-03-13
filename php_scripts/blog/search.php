@@ -1,38 +1,36 @@
 <?php
-	// Так как в include есть какието header, перенаправление делаем в начале скрипта, а скрипт будет выполнен до конца.
-	//header('Location: ../../search.php');
-	// Подключаю названия БД
+	/* скрипт грузится при построении search.php */
+	// подключаем путь до БД
 	include "data/bd.php";
-	// подключаемся к серверу с базой данных // Данные выданы провайдером
-	//$link = mysql_connect('localhost','smite211_smite','H@ng@11thepe0p1e') or die("ERROR: ".mysql_error());
-	// После подключения выбираем нужную базу данных
+	// проверка на подключение к БД иначе ERROR
 	mysql_select_db($bd) or die("ERROR: ".mysql_error());
 	// Указываем кодировку в которой будем работать
 	mysql_set_charset('utf8');
-	// Создаем переменную res и заносим туда все данные из таблицы users построчно
-	$res = mysql_query("SELECT * FROM `blog`");
 
-	//search
+	/* если в глобальном массиве $_POST, с индексом search, что-то есть, то зоздаем переменную
+	$search и вносим туда данные, иначе создаем переменную и присваиваем ей пустое значение */
 	if (isset($_POST['search'])) {$search = $_POST['search'];} else {$search = "none";};
 
+	// защищаем нашу спеременную от вредоносного кода
 	$search = trim($search); // Обрезаем пробелы и спецсимволы
 	$search = mysql_real_escape_string($search); // Фильтруем текст
 	$search = htmlspecialchars($search); // Переводим
 
+	// выводим строчку того что ввел пользователь
 	echo "<div class=\"post_block\">Поиск по запросу: <span class='orange'>".$search."</span></div>";
 
-	$text = "";
-
+	// составляем строку с выборкой из БД
+	/* ВЫБРАТЬ поля `id`, `title`, `text`, `fullnews` ИЗ таблицы `blog` ГДЕ поле `title` ПОЖОЖЕ на '%$search%' и т.д.*/
 	$sql = "SELECT `id`, `title`, `text`, `fullnews` FROM `blog` WHERE `title` LIKE '%$search%' OR `text` LIKE '%$search%' OR `fullnews` LIKE '%$search%'";
 
+	// делаем выборку и пишем в переменную
 	$result = mysql_query($sql);
 
-	while($data=mysql_fetch_array($result)) {// раскладываем на массив
-		//$json='<a href="'$data['id']'"'.$data['title']'</a><br>';
+	// выводим ссылки на статьи в которых найдено совпадение
+	while($data=mysql_fetch_array($result)) {
 		$json='<a href="fullnews.php?article='.$data['id'].'">'.$data['id']." - ".$data['title'].'</a><br>';
 		echo "<div class=\"post_block\">";
 		echo $json;
 		echo "</div>";
 	};
-
 ?>
