@@ -8,6 +8,10 @@ body {
 input.checkbox_add {margin-right: 8px;}
 input.checkbox_edit {margin-right: 8px;}
 
+#tags_add_block label {
+ margin: 0 6px;
+}
+
 @media (max-width: 700px) {
     body {
         font-size: 10px;
