@@ -30,12 +30,15 @@
 	//Вносим в переменную текст из глобального массива $_POST
 	if (isset($_POST['theme'])) {$theme = $_POST['theme'];} else {$theme = "home";};
 
+	//Вносим в переменную текст из глобального массива $_POST
+	if (isset($_POST['tags'])) {$tags = $_POST['tags'];} else {$tags = "1";};
+
 	// Вычисляем дату
 	$date = date( "d.m.y" );
 
 	if ($news != "") {
 		//mysql_query(" INSERT INTO `blog` (`text`) VALUES ('$news') ",$link); // рабочий
-		mysql_query(" INSERT INTO `blog`(`title`, `text`, `fullnews`, `theme`, `date`, `status`) VALUES ('$title','$news','$fullnews','$theme','$date','$status') ",$link);
+		mysql_query(" INSERT INTO `blog`(`title`, `text`, `fullnews`, `theme`, `date`, `status`, `tags`) VALUES ('$title','$news','$fullnews','$theme','$date','$status','$tags') ",$link);
 		//mysql_query(" INSERT INTO `blog` (`date`) VALUES ('$date') ",$link);
 		//echo "Новость добавлена!";
 		//echo 'news=' . $news;

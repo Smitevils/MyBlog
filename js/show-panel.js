@@ -3,6 +3,7 @@ $(document).ready(function(){
 	var add_article = true;
 	var edit_article = true;
 	var generate_img = true;
+	var generate_tag = true;
 
 	function showMenuAdd(){
 		/* Проверка блока добавления статьи */
@@ -37,11 +38,24 @@ $(document).ready(function(){
 		}
 	};
 
+	function showMenuGenerateTag(){
+		/* Проверка блока редактирования статьи */
+		if (generate_tag) {
+			$('#div_hiden_4').css( "max-height", "0" )
+			generate_tag = false;
+		} else {
+			$('#div_hiden_4').css( "max-height", "3000px" )
+			generate_tag = true;
+		}
+	};
+
 	showMenuAdd();
 	showMenuEdit();
 	showMenuGenerateImg();
+	showMenuGenerateTag();
 
 	$('#headline_add_article').click( function() { showMenuAdd(); } );
 	$('#headline_edit_article').click( function() { showMenuEdit(); } );
 	$('#headline_generator_img').click( function() { showMenuGenerateImg(); } );
+	$('#headline_generator_tag').click( function() { showMenuGenerateTag(); } );
 });

@@ -437,3 +437,13 @@ div.submit {
 	float: left;
 	text-align: center;
 }
+
+.tag {
+	padding: 4px 6px;
+	margin-right: 4px;
+	background-color: #95ABF9;
+}
+
+.wrap_tags {
+	padding-top: 20px;
+}
