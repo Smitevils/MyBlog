@@ -30,6 +30,25 @@ function sendAjax(id)  {
                 $("#edit_status").prop("checked", false)
             };
 
+            var tag_get = data[5];
+            tag_get = tag_get.split(/[,]/);
+
+            $(".checkbox_edit").prop("checked", false)
+            //alert(tag_get.length);
+            //$("#tags_add_block").html('355436');
+            for (var i = 0; i < tag_get.length; i++) {
+                /*if ($(".checkbox_edit").val == tag_get[i]) {*/
+                    //alert($(".checkbox_edit").val());
+                    //alert($(".checkbox_edit").slice(tag_get[i], tag_get[i]+1).val());
+                    //alert(tag_get[i]);
+                    $('[name = "'+tag_get[i]+'"]').prop("checked", true)
+                    //$(".checkbox_edit").attr("checked","checked");
+                /*};*/
+            };
+            checkTagEdit();
+
+
+
             //$("#edit_status").attr("checked", data[3]);
         }
     });

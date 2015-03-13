@@ -40,12 +40,15 @@
 	//Вносим в переменную текст из глобального массива $_POST
 	if (isset($_POST['edit_theme'])) {$theme = $_POST['edit_theme'];} else {$theme = "home";};
 
+	//Вносим в переменную текст из глобального массива $_POST
+	if (isset($_POST['tags_edit'])) {$tags = $_POST['tags_edit'];} else {$tags = "1";};
+
 	// Вычисляем дату
 	$date = date( "d.m.y" );
 
 	if ($news != "") {
 		//mysql_query(" INSERT INTO `blog` (`text`) VALUES ('$news') ",$link); // рабочий
-		mysql_query("UPDATE `blog` SET title='$title', text='$news', fullnews='$fullnews', status='$status', theme='$theme' WHERE id='$edit_id'",$link);
+		mysql_query("UPDATE `blog` SET title='$title', text='$news', fullnews='$fullnews', status='$status', theme='$theme', tags='$tags' WHERE id='$edit_id'",$link);
 		//mysql_query(" INSERT INTO `blog` (`date`) VALUES ('$date') ",$link);
 		//echo "Новость добавлена!";
 		//echo 'news=' . $news;

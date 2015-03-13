@@ -24,7 +24,7 @@
 
 
 	while($data=mysql_fetch_array($res)) {// раскладываем на массив
-		$json=$data['title'].'*'.$data['text'].'*'.$data['fullnews'].'*'.$data['theme'].'*'.$data['status'];
+		$json=$data['title'].'*'.$data['text'].'*'.$data['fullnews'].'*'.$data['theme'].'*'.$data['status'].'*'.$data['tags'];
 	};
 
 	//echo serialize($json);
