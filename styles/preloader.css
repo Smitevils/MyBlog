@@ -1,0 +1,25 @@
+#page-preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #1F253D;
+    z-index: 100500;
+}
+#page-preloader .img-preloader {
+    width: 100px;
+    height: 100px;
+    background: url(../img/svg/preloader.svg) no-repeat center;
+	background-size: 100px 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -50px 0 0 -50px;
+	-webkit-animation: rotate 2s infinite linear;
+	-o-animation: rotate 2s infinite linear;
+	animation: rotate 2s infinite linear;
+}
+@-webkit-keyframes rotate {
+    from {-webkit-transform:  rotate(0);}	to {-webkit-transform: rotate(360deg);}
+}

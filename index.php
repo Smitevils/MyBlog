@@ -11,6 +11,7 @@
 	<meta charset="UTF-8">
 	<title>SmiteVils Blog</title>
 	<!-- Внешние стили -->
+	<link rel="stylesheet" href="styles/preloader.css">
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/style.css">
 	<!-- Add fancyBox main CSS -->
@@ -68,6 +69,18 @@
 		<p id="subscribe_alert" style="line-height: 100px;">12345</p>
 	</div>
 	<a href="#popup" id="a_popup" class="fancybox">ссылка</a>
+
+	<!-- Прелоадер -->
+	<div id="page-preloader"><div class="img-preloader"><div class="spinner"></div></div></div>
+	<script>
+		$(window).on('load', function () {
+		    var $preloader = $('#page-preloader'),
+		        $img_preloader   = $preloader.find('.img-preloader');
+		    $img_preloader.fadeOut();
+		    $preloader.delay(350).fadeOut('slow');
+		});
+	</script>
+	<!-- /Прелоадер -->
 
 </body>
 </html>
