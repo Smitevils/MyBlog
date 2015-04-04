@@ -11,25 +11,6 @@
 			echo "<div class=\"clear\"></div>";
 			echo "<div class=\"theme_block\">" . $row['theme'] . "</div>";
 			echo "<div class=\"date_block\">" . $row['date'] . "</div>";
-			// выводим теги
-			//echo $row['tags'];
-			echo "<div class=\"clear\"></div>";
-			echo '<div class="wrap_tags">';
-			$arr = explode(",", $row['tags']);
-			//print_r($arr)."<br>";
-			$countarr = count($arr);
-			//$xxx = mysql_query("SELECT tag FROM tags WHERE id = 1");
-			//$yyy = mysql_fetch_assoc($xxx);
-			//echo $yyy["tag"];
-			for ($i=0; $i < $countarr; $i++) {
-				echo '<span class="tag">';
-					$xxx = mysql_query("SELECT tag FROM tags WHERE id = $arr[$i]");
-					$yyy = mysql_fetch_assoc($xxx);
-					echo $yyy["tag"];
-				echo '</span>';
-			};
-			echo "</div>";
-			//
 			echo "<div class=\"clear\"></div>";
 		echo "</div><br>";
 	};

@@ -46,7 +46,6 @@
 			<h1>Admin</h1>
 		</div>
 		<?php /* блок генерации кода картинки */ include "engine/generateimgcode.php"; ?>
-		<?php /* блок просмотра и добавления тегов */ include "engine/generatetags.php"; ?>
 		<div class="clear"></div>
 	</div>
 	<div class="right_block">
@@ -81,29 +80,6 @@
 					<p><textarea class="add_post_text" rows="10" cols="45" name="text"></textarea></p>
 					<p><b>Введите текст полной статьи:</b></p>
 					<p><textarea class="add_post_text_full" rows="10" cols="45" name="fulltext"></textarea></p>
-					<p><b>Теги:</b></p>
-					<div>
-						<?php
-							$tags = mysql_query("SELECT * FROM `tags` ORDER BY `id`");
-							while($data=mysql_fetch_array($tags)) {// раскладываем на массив
-								echo '<label><input onclick="checkTag()" class="checkbox_add" type="checkbox" name="'.$data['id'].'" value="'.$data['id'].'"/>'.$data['tag'].'</label>';
-							};
-						?>
-						<script>
-							function checkTag() {
-								var sum = "";
-								var arr = $('.checkbox_add:checked');
-								arr.each(function(index, el){
-									var pr = el.value;
-									sum += pr;
-									sum += ",";
-								});
-								sum = sum.slice(0, -1);
-								$('#tags').val(sum);
-							}
-						</script>
-						<input class="title" id="tags" type="hidden" name="tags">
-					</div><br>
 					<label><input type="checkbox" name="status" /> Готовность </label>
 					<p><div class="submit" id="showPreviewAdd">Preview</div></p>
 					<p><input class="submit" type="submit" value="Отправить"></p>
@@ -159,30 +135,6 @@
 					<p><textarea id="edit_text" class="add_post_text" value="defgsdg" rows="10" cols="45" name="edit_text"></textarea></p>
 					<p><b>Исправьте текст полной статьи:</b></p>
 					<p><textarea id="edit_fulltext" class="add_post_text_full" rows="10" cols="45" name="edit_fulltext"></textarea></p>
-					<p><b>Теги:</b></p>
-					<div class="wrap_tags_edit">
-						<div id="tags_add_block"></div>
-						<?php
-							$tags = mysql_query("SELECT * FROM `tags` ORDER BY `id`");
-							while($data=mysql_fetch_array($tags)) {// раскладываем на массив
-								echo '<label><input onclick="checkTagEdit()" class="checkbox_edit" type="checkbox" name="'.$data['id'].'" value="'.$data['id'].'"/>'.$data['tag'].'</label>';
-							};
-						?>
-						<script>
-							function checkTagEdit() {
-								var sum = "";
-								var arr = $('.checkbox_edit:checked');
-								arr.each(function(index, el){
-									var pr = el.value;
-									sum += pr;
-									sum += ",";
-								});
-								sum = sum.slice(0, -1);
-								$('#tags_edit').val(sum);
-							}
-						</script>
-						<input class="title" id="tags_edit" type="text" name="tags_edit">
-					</div><br>
 					<p><label><input type="checkbox" id="edit_status" name="status" /> Готовность </label></p>
 					<p><label><input type="checkbox" name="edit_delite" /> Удалить </label></p>
 					<p><div class="submit" id="showPreviewEdit">Preview</div></p>
