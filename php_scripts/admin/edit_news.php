@@ -41,7 +41,7 @@
 	if (isset($_POST['edit_theme'])) {$theme = $_POST['edit_theme'];} else {$theme = "home";};
 
 	//Вносим в переменную текст из глобального массива $_POST
-	if (isset($_POST['tags_edit'])) {$tags = $_POST['tags_edit'];} else {$tags = "1";};
+	if (isset($_POST['tags_edit'])) {$tags = $_POST['tags_edit'];} else {$tags = "";};
 
 	// Вычисляем дату
 	$date = date( "d.m.y" );

@@ -31,20 +31,37 @@ function sendAjax(id)  {
             };
 
             var tag_get = data[5];
+            alert(tag_get);
             tag_get = tag_get.split(/[,]/);
 
-            $(".checkbox_edit").prop("checked", false)
-            //alert(tag_get.length);
-            //$("#tags_add_block").html('355436');
-            for (var i = 0; i < tag_get.length; i++) {
-                /*if ($(".checkbox_edit").val == tag_get[i]) {*/
-                    //alert($(".checkbox_edit").val());
-                    //alert($(".checkbox_edit").slice(tag_get[i], tag_get[i]+1).val());
-                    //alert(tag_get[i]);
+
+            /*for (var i = 0; i < tag_get.length; i++) {
                     $('[name = "'+tag_get[i]+'"]').prop("checked", true)
-                    //$(".checkbox_edit").attr("checked","checked");
-                /*};*/
+            };*/
+
+            for (var i = 0; i < tag_get.length; i++) {
+                num_of_tag_edit++;
+                $("#edit_tags").find(".tags_preview").append("<div value='"+num_of_tag_edit+"' class='tag_variants'><div class='tag'><div class='tag_text' value='"+tag_get[i]+"'>"+tag_get[i]+"</div><div value='"+num_of_tag_edit+"' class='tag_delite'>&#2363;</div></div></div>");
+                $("#edit_tags").find(".tag_delite[value='"+num_of_tag_edit+"']").click( function() {
+                    $("#edit_tags").find(".tag_variants[value='" + $(this).attr("value") + "']").detach();
+                    var string_of_tags = "";
+                    $("#edit_tags").find(".tag_text").each(function() {
+                        string_of_tags = string_of_tags + "," + $(this).attr("value");
+                    })
+                    string_of_tags = string_of_tags.substring(1);
+                    alert(string_of_tags);
+                    $("#edit_tags").find("input[name='tags_edit']").val(string_of_tags);
+                } );
             };
+
+                    var string_of_tags = "";
+                    $("#edit_tags").find(".tag_text").each(function() {
+                        string_of_tags = string_of_tags + "," + $(this).attr("value");
+                    })
+                    string_of_tags = string_of_tags.substring(1);
+                    alert(string_of_tags);
+                    $("#edit_tags").find("input[name='tags_edit']").val(string_of_tags);
+
             checkTagEdit();
 
 
@@ -53,5 +70,6 @@ function sendAjax(id)  {
         }
     });
     /* /Ajax */
+
 
 };

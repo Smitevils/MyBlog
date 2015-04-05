@@ -80,71 +80,10 @@
 					<p><textarea class="add_post_text" rows="10" cols="45" name="text"></textarea></p>
 					<p><b>Введите текст полной статьи:</b></p>
 					<p><textarea class="add_post_text_full" rows="10" cols="45" name="fulltext"></textarea></p>
-					<!-- Ввод Тегов -->
-					<p><b>Введите теги:</b></p>
-					<p>
-						<div class="tags_wrap">
-							<input class="tags" id="tags" type="text" name="tags">
-							<div class="add_tag">Добавить</div>
-							<div class="clear"></div><br>
-							<div class="tags_preview">
-								<!-- 
-								<div class="tag_variants">
-									<div class="tag">
-										<div class="tag_text">12345</div>
-										<div class="tag_delite">&#2363;</div>
-									</div>
-								</div>
-								 -->
-							</div>
-							<div class="clear"></div>
-						</div>
-					</p>
-					<!--/Ввод Тегов -->
-					<!-- Ввод Тегов - Скрипт -->
-					<script>
-						//Создаем переменную которая задает порядковые номера новым тегам (задает значение value)...
-						//...область видимости переменной - глобальная
-						var num_of_tag = 0;
-						//Код отработает после загрузки документа
-						$(document).ready(function(){
-							// Функция добавляет и удаляет теги (добавляет и удаляет код HTML)
-							function tagAddDel() {
-								// Плюсуем к порядковому номеру единицу...
-								num_of_tag++;
-								//Функцией .append добавляем в блок код HTML...
-								//...в саму обертку тега добавляем value со значением порядкового номера...
-								//...так же value с порядковым номером добавляем к элементу - крестику...
-								$(".tags_preview").append("<div value='"+num_of_tag+"' class='tag_variants'><div class='tag'><div class='tag_text' value='"+$("#tags").val()+"'>"+$("#tags").val()+"</div><div value='"+num_of_tag+"' class='tag_delite'>&#2363;</div></div></div>");
-								//После создания и вставки элементов (кода HTML) вешаем обработчик на...
-								//...крестик (кнопку удаления) с явным указанием его порядкового номера, иначе...
-								//...обработчик ляжет на подобные элементы повторно...
-								$(".tag_delite[value='"+num_of_tag+"']").click( function() {
-									//Ищем элемент со значением value таким же как и у элемента...
-									//...по которому кликнули и удалаем его функцией .detach()
-									$(".tag_variants[value='" + $(this).attr("value") + "']").detach();
-									tagsToString();
-								} );
-								//Функция состовляет строку из всех введеных (существующих) тегов
-								tagsToString();
-							}
-							function tagsToString(){
-								//Переменная которая будет хранить строчку со всеми тегами
-								var string_of_tags = "";
-								//Перебираем все теги и берем у кождого значение value и...
-								//...составляем строчку
-								$(".tag_text").each(function() {
-									string_of_tags = string_of_tags + "," + $(this).attr("value");
-								})
-								//удаляем первую запятую
-								string_of_tags = string_of_tags.substring(1)
-								alert(string_of_tags)
-							}
-							//Вешаем обработчик на кнопку Добавить тег
-							$('.add_tag').click( function() { tagAddDel(); } );
-						});
-					</script>
-					<!-- /Ввод Тегов - /Скрипт -->
+					<?php
+						// добавление тегов
+						include "engine/add_tags.php";
+					?>
 					<label><input type="checkbox" name="status" /> Готовность </label>
 					<p><div class="submit" id="showPreviewAdd">Preview</div></p>
 					<p><input class="submit" type="submit" value="Отправить"></p>
@@ -200,6 +139,10 @@
 					<p><textarea id="edit_text" class="add_post_text" value="defgsdg" rows="10" cols="45" name="edit_text"></textarea></p>
 					<p><b>Исправьте текст полной статьи:</b></p>
 					<p><textarea id="edit_fulltext" class="add_post_text_full" rows="10" cols="45" name="edit_fulltext"></textarea></p>
+					<?php
+						// добавление тегов
+						include "engine/edit_tags.php";
+					?>
 					<p><label><input type="checkbox" id="edit_status" name="status" /> Готовность </label></p>
 					<p><label><input type="checkbox" name="edit_delite" /> Удалить </label></p>
 					<p><div class="submit" id="showPreviewEdit">Preview</div></p>
