@@ -27,6 +27,17 @@
 			//
 			$array = explode(",",  $row_full['tags']);
 			$result = count($array);
+			if ($array[0] != "") {
+				echo "<div class=\"tags_wrap\">";
+				for ($i=0; $i < $result; $i++) {
+					echo "<div class='tag_variants'><div class='tag'><div class='tag_text'>";
+					echo $array[$i];
+					echo "</div></div></div>";
+				};
+				echo "<div class='clear'></div>";
+				echo "</div>";
+			}
+			/*
 			echo "<div class=\"tags_wrap\">";
 			for ($i=0; $i < $result; $i++) {
 				echo "<div class='tag_variants'><div class='tag'><div class='tag_text'>";
@@ -35,6 +46,7 @@
 			};
 			echo "<div class='clear'></div>";
 			echo "</div>";
+			*/
 			//
 			// Вставляем код Pluso
 			include "php_scripts/pluso.php";
