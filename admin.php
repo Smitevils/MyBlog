@@ -86,6 +86,7 @@
 					?>
 					<label><input type="checkbox" name="status" /> Готовность </label>
 					<p><div class="submit" id="showPreviewAdd">Preview</div></p>
+					<div class="clear"></div>
 					<p><input class="submit" type="submit" value="Отправить"></p>
 				</form>
 			</div>
@@ -146,6 +147,7 @@
 					<p><label><input type="checkbox" id="edit_status" name="status" /> Готовность </label></p>
 					<p><label><input type="checkbox" name="edit_delite" /> Удалить </label></p>
 					<p><div class="submit" id="showPreviewEdit">Preview</div></p>
+					<div class="clear"></div>
 					<p><input class="submit" type="submit" value="Edit"></p>
 				</form>
 			</div>

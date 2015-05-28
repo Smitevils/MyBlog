@@ -1,4 +1,4 @@
-label {padding: 6px; border: 1px #95ABF9 solid;}
+label {padding: 6px;/*border: 1px #95ABF9 solid;*/}
 
 .clear {clear: both;}
 
@@ -45,7 +45,7 @@ input {
 }
 
 .add_post_text:hover {
-	border: 1px #95ABF9 solid;
+	background-color: #1F253D;
 }
 
 .add_post_text_full {
@@ -59,7 +59,7 @@ input {
 }
 
 .add_post_text_full:hover {
-	border: 1px #95ABF9 solid;
+	background-color: #1F253D;
 }
 
 input.title {
@@ -73,7 +73,7 @@ input.title {
 }
 
 input.title:hover {
-	outline: 1px #95ABF9 solid;
+	background-color: #1F253D;
 }
 
 
@@ -85,10 +85,10 @@ input.title:hover {
  ======= *//* ======= *//* ======= *//* ======= */
 
 .tags_wrap {
-	width: 96%; min-height: 10px;
-	border: 1px #95ABF9 solid;
+	width: 100%; min-height: 10px;
+	border-bottom: 1px #95ABF9 solid;
 	margin: 0 auto;
-	padding: 10px;
+	padding: 0px;
 }
 
 input.tags {
@@ -136,6 +136,7 @@ div.submit {
 	padding: 10px;
 	display: block;
 	cursor: pointer;
+	float: left;
 }
 
 div#showPreviewEdit {
@@ -213,3 +214,5 @@ select {
 	background: #50597B;
 	padding: 7px;
 }
+
+.edit_tags { background-color: #1F253D;}
